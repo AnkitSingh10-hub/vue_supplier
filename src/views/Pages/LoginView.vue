@@ -10,6 +10,7 @@
     <button>submit</button>
   </VeeForm>
   {{ val }}
+  <q-input filled color="white" class="rounded-md w-24 !text-white" v-model="text" label="Filled" />
 </template>
 
 <script setup lang="ts">
