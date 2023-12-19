@@ -23,7 +23,7 @@
         <br>
         <button @click="signIn">Sign In</button>
         <br>
-        <p id="noid">Don’t have an account? <span id="signupnow">SignUp now</span></p>
+        <p id="noid">Don’t have an account? <span id="signupnow"><a href="#">SignUp now</a></span></p>
 
 
       </form>
@@ -103,12 +103,14 @@ line-height: normal;
   flex: 3.5;
   background-color: #ffffff;
   padding: 20px;
+  margin-top: 100px;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .login-form label {
