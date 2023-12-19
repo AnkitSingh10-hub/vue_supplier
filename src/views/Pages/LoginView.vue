@@ -89,8 +89,10 @@ line-height: normal;
   flex: 6.5;
   /* background-color: #EA2127; */
   background-image: url('../../assets/icons/background.png');
-  background-size: cover; 
-
+  background-size: cover;
+  background-repeat: no-repeat; 
+  height: 100vh;
+  margin: 0; 
   display: flex;
   flex-direction: column;
   justify-content: center;
