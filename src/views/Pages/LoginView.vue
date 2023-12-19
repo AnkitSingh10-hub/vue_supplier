@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    
     <div class="left-half">
       <h1 class="heading">Welcome to Supplier Sign In Portal</h1>
       <h4>Become a part of Trip Turbo’s network of suppliers in just a few clicks away.<br>
@@ -11,7 +12,7 @@
 
     <div class="right-half">
       <form class="login-form">
-        <img src="../../assets/icons/tripTurbo.png" alt="Description of the image">
+        <img id="logo" src="../../assets/icons/tripTurbo.png" alt="Description of the image">
 
 
         <input class="check" type="email" id="email" v-model="email" required placeholder="Email">
@@ -41,6 +42,9 @@ const signIn = () => {
 }
 </script>
 <style scoped>
+#logo{
+  height:50px
+}
 #signupnow{
   color: #EA2127;
 font-family: Poppins;
@@ -80,9 +84,13 @@ line-height: normal;
 
 }
 
+
 .left-half {
-  flex: 7;
-  background-color: #EA2127;
+  flex: 6.5;
+  /* background-color: #EA2127; */
+  background-image: url('../../assets/icons/background.png');
+  background-size: cover; 
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +98,7 @@ line-height: normal;
 }
 
 .right-half {
-  flex: 3;
+  flex: 3.5;
   background-color: #ffffff;
   padding: 20px;
 }
