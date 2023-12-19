@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div class="left-half">
-      <h2>Left Half</h2>
+      <h1 class="heading">Welcome to Supplier Sign In Portal</h1>
+      <h4>Become a part of Trip Turbo’s network of suppliers in just a few clicks away.<br>
+        Sign up now and begin revolutionizing the way Nepal travels.</h4>
       <div class="image-container">
         <img src="../../assets/icons/loginpersonimage.png" alt="Description of the image">
       </div>
@@ -10,16 +12,18 @@
     <div class="right-half">
       <h2>Right Half</h2>
       <form class="login-form">
-        <label for="email">Email:</label>
-        <input type="email" id="email" v-model="email" required>
+        <img src="../../assets/icons/tripTurbo.png" alt="Description of the image">
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" v-model="password" required>
 
+        <input class="check" type="email" id="email" v-model="email" required placeholder="Enter your email">
+
+        <input class="check" type="password" id="password" v-model="password" required placeholder="Enter your password">
+        <a class="pass" href="#">Forgot Password?</a>
+
+        <br>
         <button @click="signIn">Sign In</button>
-        
 
-        <a href="#">Forgot Password?</a>
+
       </form>
     </div>
   </div>
@@ -36,9 +40,25 @@ const signIn = () => {
 }
 </script>
 <style scoped>
+.login-form a {
+  margin-top: 10px;
+  text-decoration: none;
+  margin-left: auto;
+}
+.heading{
+  color: #FFF;
+font-family: Poppins;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
 .container {
   display: flex;
   height: 100vh;
+  width: 1440px;
+
 }
 
 .left-half {
@@ -46,8 +66,8 @@ const signIn = () => {
   background-color: #EA2127;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  justify-content: center;
+  align-items: center;
 }
 
 .right-half {
@@ -64,33 +84,75 @@ const signIn = () => {
 
 .login-form label {
   margin-bottom: 5px;
+  display: block;
+  /* Ensure labels are on their own line */
+}
+
+.check {
+  margin-top: 20px;
 }
 
 .login-form input {
   margin-bottom: 10px;
-  padding: 5px;
-  background-color: #ccc; /* Set background color to grey */
-  border: 1px solid #666; /* Add a border for better visibility */
+  padding: 10px;
+
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #B1B1B1;
+  background: #FFF;
+  flex-shrink: 0;
 }
 
 .login-form button {
-  background-color: #4CAF50;
+  border-radius: 10px;
+background: #EA2127;
   color: white;
   padding: 10px;
   border: none;
   cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.login-form button:hover {
-  background-color: #45a049;
-}
 
 .login-form a {
   margin-top: 10px;
   text-decoration: none;
-  color: #333;
 }
+
+.login-form {
+  max-width: 300px;
+  /* Set a maximum width for the form */
+  margin: 0 auto;
+  /* Center the form on the page */
+}
+
 .image-container {
-  text-align: center; /* Center the image within its container */
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+h4 {
+  color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.pass {
+
+  align-items: right;
+  color: #002060;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 </style>
