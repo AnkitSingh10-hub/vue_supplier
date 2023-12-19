@@ -1,47 +1,96 @@
 <template>
-  <h1>sjfksdjf</h1>
-  <VeeForm @submit="register">
-    <VeeField name="name" label="First Name" type="text" rules="required" v-model="val" />
-    <VeeErrorMessage name="name" class="text-red-400" />
-    <VeeField name="email" type="email" rules="email" />
-    <VeeErrorMessage name="email" class="text-red-400" />
-    <VeeField name="password" type="password" rules="min: 8" />
-    <VeeErrorMessage name="password" class="text-red-400" />
-    <button>submit</button>
-  </VeeForm>
-  {{ val }}
-  <q-input filled color="white" class="rounded-md w-24 !text-white" v-model="text" label="Filled" />
+  <div class="container">
+    <div class="left-half">
+      <h2>Left Half</h2>
+      <div class="image-container">
+        <img src="../../assets/icons/loginpersonimage.png" alt="Description of the image">
+      </div>
+    </div>
+
+    <div class="right-half">
+      <h2>Right Half</h2>
+      <form class="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" v-model="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" v-model="password" required>
+
+        <button @click="signIn">Sign In</button>
+        
+
+        <a href="#">Forgot Password?</a>
+      </form>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useJwtStore } from '@/stores/jwt'
-import { useMeta, useQuasar } from 'quasar'
-import { useRouter } from 'vue-router'
 
-useMeta({
-  title: 'Login'
-})
-const JwtStore = useJwtStore()
-const val = ref('')
+const email = ref('');
+const password = ref('');
 
-const onSubmit = async (): Promise<void> => {
-  await JwtStore.getJWT({
-    username: username.value,
-    password: password.value
-  })
-  $q.notify({
-    message: 'Login successfully',
-    type: 'positive',
-    position: 'top-right'
-  })
-  $router.push({ name: 'Home' })
+const signIn = () => {
+  console.log('Signing in with:', email.value, password.value);
 }
-const register = () => {}
 </script>
+<style scoped>
+.container {
+  display: flex;
+  height: 100vh;
+}
 
-<style scoped lang="scss">
+.left-half {
+  flex: 7;
+  background-color: #EA2127;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+.right-half {
+  flex: 3;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
 .login-form {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form label {
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #ccc; /* Set background color to grey */
+  border: 1px solid #666; /* Add a border for better visibility */
+}
+
+.login-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #45a049;
+}
+
+.login-form a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #333;
+}
+.image-container {
+  text-align: center; /* Center the image within its container */
 }
 </style>
