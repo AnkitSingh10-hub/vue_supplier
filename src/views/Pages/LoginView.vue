@@ -10,18 +10,19 @@
     </div>
 
     <div class="right-half">
-      <h2>Right Half</h2>
       <form class="login-form">
         <img src="../../assets/icons/tripTurbo.png" alt="Description of the image">
 
 
-        <input class="check" type="email" id="email" v-model="email" required placeholder="Enter your email">
+        <input class="check" type="email" id="email" v-model="email" required placeholder="Email">
 
-        <input class="check" type="password" id="password" v-model="password" required placeholder="Enter your password">
+        <input class="check" type="password" id="password" v-model="password" required placeholder="Password">
         <a class="pass" href="#">Forgot Password?</a>
 
         <br>
         <button @click="signIn">Sign In</button>
+        <br>
+        <p id="noid">Don’t have an account? <span id="signupnow">SignUp now</span></p>
 
 
       </form>
@@ -40,18 +41,36 @@ const signIn = () => {
 }
 </script>
 <style scoped>
+#signupnow{
+  color: #EA2127;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+#noid {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .login-form a {
   margin-top: 10px;
   text-decoration: none;
   margin-left: auto;
 }
-.heading{
+
+.heading {
   color: #FFF;
-font-family: Poppins;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .container {
@@ -107,7 +126,7 @@ line-height: normal;
 
 .login-form button {
   border-radius: 10px;
-background: #EA2127;
+  background: #EA2127;
   color: white;
   padding: 10px;
   border: none;
@@ -137,12 +156,12 @@ background: #EA2127;
 
 h4 {
   color: #FFF;
-text-align: center;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .pass {
