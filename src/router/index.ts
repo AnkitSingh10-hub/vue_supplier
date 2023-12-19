@@ -1,23 +1,82 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import {
+  createRouter,
+  createWebHistory,
+  type NavigationGuardNext,
+  type RouteLocationNormalized
+} from 'vue-router'
+import { useJwtStore } from '@/stores/jwt'
+
+const authenticatedRoutes: string[] = [
+  'Profile',
+  'TicketHistory',
+  'TTCoins',
+  'TransactionHistory',
+  'PaymentSuccess',
+  'PaymentError',
+  'FlightDetail',
+  'CheckAvailability',
+  'Change-Password'
+]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(_, __, ___) {
+    // always scroll to top
+    return { top: 0 }
+  },
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
+      name: 'Home',
+      component: () => import('../views/LandingView.vue')
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: '/register',
+      name: 'Register',
+      component: () => import('@/views/Pages/RegisterView.vue')
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: () => import('@/views/Pages/LoginView.vue')
+    },
+    {
+      name: 'notfound',
+      path: '/:pathMatch(.*)*',
+      component: () => import('../views/NotFound.vue')
     }
   ]
 })
 
 export default router
+
+export async function WaitUntilRefreshed(): Promise<void> {
+  const JwtStore = useJwtStore()
+  while (JwtStore.RefreshingToken) {
+    await new Promise((resolve) => setTimeout(resolve, 100))
+  }
+}
+
+router.beforeEach(
+  async (to: RouteLocationNormalized, _: RouteLocationNormalized, next: NavigationGuardNext) => {
+    const JwtStore = useJwtStore()
+
+    if (to.name == 'Login' || to.name == 'Register') {
+      await WaitUntilRefreshed()
+      if (JwtStore.loggedIn) {
+        next({ name: 'Home' })
+      } else {
+        next()
+      }
+    } else if (authenticatedRoutes.includes(to.name)) {
+      await WaitUntilRefreshed()
+      if (JwtStore.loggedIn) {
+        next()
+      } else {
+        next({ name: 'NotFound' })
+      }
+    } else {
+      next()
+    }
+  }
+)
