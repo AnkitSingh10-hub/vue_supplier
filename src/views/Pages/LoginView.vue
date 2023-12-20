@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    
+
     <div class="left-half">
       <h1 class="heading">Welcome to Supplier Sign In Portal</h1>
       <h4>Become a part of Trip Turbo’s network of suppliers in just a few clicks away.<br>
@@ -11,22 +11,25 @@
     </div>
 
     <div class="right-half">
-      <form class="login-form">
+      <form class="login-form" @submit.prevent="signIn">
         <img id="logo" src="../../assets/icons/tripTurbo.png" alt="Description of the image">
 
 
-        <input class="check" type="email" id="email" v-model="email" required placeholder="Email">
+        <input class="check" type="email" id="email" v-model="payload.email" required placeholder="Enter Email"
+          style="padding: 17px">
 
-        <input class="check" type="password" id="password" v-model="password" required placeholder="Password">
+        <input class="check" type="password" id="password" v-model="payload.password" required
+          placeholder="Enter Password" style="padding:17px">
         <a class="pass" href="#">Forgot Password?</a>
 
         <br>
         <button @click="signIn">Sign In</button>
         <br>
-        <p id="noid">Don’t have an account? <span id="signupnow"><a href="#">SignUp now</a></span></p>
+        <p id="noid">Don’t have an account? <span id="signupnow"><a href="#">Signup now</a></span></p>
 
 
       </form>
+      
     </div>
   </div>
 </template>
@@ -34,25 +37,48 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const email = ref('');
-const password = ref('');
+interface Payload {
+  email: string;
+  password: string;
+}
+
+const payload = ref<Payload>({
+  email: '',
+  password: '',
+});
 
 const signIn = () => {
-  console.log('Signing in with:', email.value, password.value);
-}
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(payload.value.email)) {
+    console.error('Invalid email address');
+    return;
+  }
+
+  if (payload.value.password.length < 6) {
+    console.error('Password must be at least 6 characters long');
+    return;
+  }
+
+  console.log('Signing in with:', payload.value.email, payload.value.password);
+};
+
+
 </script>
 <style scoped>
-#logo{
-  height:50px
+#logo {
+  height: 50px;
+  margin-bottom: 20px;
 }
-#signupnow{
+
+#signupnow {
   color: #EA2127;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
+
 #noid {
   color: #000;
   font-family: Poppins;
@@ -62,11 +88,6 @@ line-height: normal;
   line-height: normal;
 }
 
-.login-form a {
-  margin-top: 10px;
-  text-decoration: none;
-  margin-left: auto;
-}
 
 .heading {
   color: #FFF;
@@ -79,20 +100,18 @@ line-height: normal;
 
 .container {
   display: flex;
-  height: 100vh;
-  width: 1440px;
-
+  height:100%;
+  width: 100%;
+  max-width: 100%;
 }
 
-
 .left-half {
-  flex: 6.5;
-  /* background-color: #EA2127; */
+  width: 65%;
   background-image: url('../../assets/icons/background.png');
   background-size: cover;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   height: 100vh;
-  margin: 0; 
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,64 +119,70 @@ line-height: normal;
 }
 
 .right-half {
-  flex: 3.5;
+  width: 35%;
   background-color: #ffffff;
-  padding: 20px;
-  margin-top: 100px;
+  margin-bottom: 20px;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  padding: 0 2rem;
+  margin-top: 20%;
+
 }
 
 .login-form label {
   margin-bottom: 5px;
   display: block;
-  /* Ensure labels are on their own line */
-}
 
-.check {
-  margin-top: 20px;
+
 }
 
 .login-form input {
+  margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
-
   border-radius: 10px;
   width: 100%;
   box-sizing: border-box;
-
   border: 1px solid #B1B1B1;
   background: #FFF;
-  flex-shrink: 0;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 17px;
+
 }
 
 .login-form button {
   border-radius: 10px;
   background: #EA2127;
   color: white;
-  padding: 10px;
   border: none;
   cursor: pointer;
-  width: 100%;
   box-sizing: border-box;
-}
-
-
-.login-form a {
   margin-top: 10px;
-  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 15px;
+  width: 100%;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+
+
 }
+
 
 .login-form {
-  max-width: 300px;
-  /* Set a maximum width for the form */
-  margin: 0 auto;
-  /* Center the form on the page */
+  width: 100%;
+  max-width: 100%;
 }
 
 .image-container {
@@ -178,12 +203,32 @@ h4 {
 
 .pass {
 
-  align-items: right;
   color: #002060;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin-left: auto;
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-half {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-half {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+
+  }
 }
 </style>

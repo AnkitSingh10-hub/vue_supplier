@@ -14,7 +14,7 @@ onBeforeMount(async () => {
     <NavigationBar />
   </header>
 
-  <div style="margin-top: 70px; min-height: 80vh">
+  <div style="margin-top: 70px; min-height: 80vh;">
     <RouterView />
   </div>
   <Footer />
