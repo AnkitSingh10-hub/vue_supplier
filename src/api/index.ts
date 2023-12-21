@@ -194,7 +194,6 @@ export async function putAPI(
   })
 }
 
-// eslint-disable-next-line
 export async function patchAPI(
   url: string,
   // eslint-disable-next-line
