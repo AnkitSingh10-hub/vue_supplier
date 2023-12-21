@@ -7,7 +7,7 @@ export const useActivityStore = defineStore('activity', {
       initialActivitiesResponse: null as ActivityResponse | null,
       activityDetailResponse: null
     }
-  }, 
+  },
   getters: {
     getActivityList(state) {
       if (state.initialActivitiesResponse) {

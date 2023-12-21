@@ -41,12 +41,13 @@
     </div>
     <h2>
       Current page :
-      {{ 
-         activityStore.initialActivitiesResponse?.currentPage  }}
+      {{
+        activityStore.initialActivitiesResponse?.currentPage }}
     </h2>
     <div class="flex gap-2">
-      <button @click="()=>handlePagination(value)" :key="index" v-for="(value,index) in paginationArrLength " class="text-lg font-semibold">
-{{ value }}
+      <button @click="() => handlePagination(value)" :key="index" v-for="(value, index) in paginationArrLength "
+        class="text-lg font-semibold">
+        {{ value }}
       </button>
     </div>
     <button>View More</button>
@@ -62,10 +63,11 @@ const activityStore = useActivityStore();
 const buttonClicked = () => {
   activityStore.getApiActivityList(searchQuery.value);
 };
-const handlePagination = (id: number)=>{
-  if(activityStore.initialActivitiesResponse?.next)
-  activityStore.getPaginationData(id)
+const handlePagination = (id: number) => {
+  if (activityStore.initialActivitiesResponse?.next)
+    activityStore.getPaginationData(id)
 }
+
 
 onMounted(() => {
   buttonClicked();
