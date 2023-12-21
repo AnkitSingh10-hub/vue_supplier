@@ -19,7 +19,6 @@ export const api = axios.create({
 // Make Axios play nice with Django CSRF
 api.defaults.xsrfCookieName = 'csrftoken'
 api.defaults.xsrfHeaderName = 'X-CSRFToken'
-api.defaults.headers.common['App-Type'] = 'AdminWebUI'
 
 export function JwtExpired(): boolean {
   const JwtStore = useJwtStore()

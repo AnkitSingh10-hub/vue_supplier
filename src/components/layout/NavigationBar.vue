@@ -10,8 +10,18 @@
         class="h-[32px] md:h-[36px] lg:h-[40px]"
       />
     </RouterLink>
-    <RouterLink to="/">
-      <SignInButton />
+    <RouterLink class="font-[Poppins] text-lg font-semibold" to="/activities">
+      Activities
+    </RouterLink>
+    <RouterLink to="/login">
+<div class="flex" v-if="!jwtStore.isLoggedIn">
+  <SignInButton />
+
+</div>
+<aside class="text-red-500 text-lg">
+{{ 
+  jwtStore.DecodedPayload.username }}
+</aside>      
     </RouterLink>
   </nav>
 </template>
@@ -19,5 +29,10 @@
 <script lang="ts" setup>
 import { RouterLink } from 'vue-router'
 import SignInButton from './signInButton.vue'
+import { useJwtStore } from '@/stores/jwt';
+import {useRoute,useRouter} from 'vue-router'
+
+
 import TripTurboLogo from '../../assets/icons/tripTurbo.png'
+const jwtStore = useJwtStore()
 </script>

@@ -22,7 +22,7 @@ export const useJwtStore = defineStore('jwt', {
       isLoggedIn: false,
       RefreshingToken: true,
       UserDetail: {} as UserDetail
-    }
+    } 
   },
   getters: {
     loggedIn: (state) => {
@@ -37,8 +37,9 @@ export const useJwtStore = defineStore('jwt', {
       LocalStorage.set('isLoggedIn', value)
       this.isLoggedIn = value
     },
-    async getJWT(user: UserLoginInfo) {
-      const detail = (await API.getJWT(user)) as JWT
+    async getJWT(user) {
+      const response = (await API.getJWT(user)) as JWT
+      const detail = response?.data
       const decodedPayload = jwtDecode(detail.access) as DecodedJWTPayload
       this.AccessToken = detail.access
       this.DecodedPayload = decodedPayload
@@ -46,8 +47,8 @@ export const useJwtStore = defineStore('jwt', {
       this.isLoggedIn = true
     },
     async refreshAccessToken() {
-      let detail = (await API.refreshAccessToken()) as JWT
-
+      let response = (await API.refreshAccessToken()) as JWT
+      let detail = response?.data
       // eslint-disable-next-line
       let decodedPayload: DecodedJWTPayload = {} as DecodedJWTPayload
       let isLoggedIn = false

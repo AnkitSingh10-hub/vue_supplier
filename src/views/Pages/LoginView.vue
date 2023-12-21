@@ -15,8 +15,8 @@
         <img id="logo" src="../../assets/icons/tripTurbo.png" alt="Description of the image">
 
 
-        <input class="check" type="email" id="email" v-model="payload.email" required placeholder="Enter Email"
-          style="padding: 17px">
+        <input class="check" type="username" id="username" v-model="payload.username" required
+          placeholder="Enter username" style="padding: 17px">
 
         <input class="check" type="password" id="password" v-model="payload.password" required
           placeholder="Enter Password" style="padding:17px">
@@ -29,27 +29,28 @@
 
 
       </form>
-      
+
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useJwtStore } from '@/stores/jwt';
+const jwtStore = useJwtStore()
 
-interface Payload {
-  email: string;
-  password: string;
-}
 
-const payload = ref<Payload>({
-  email: '',
+const payload = ref({
+  username: '',
   password: '',
+  fcm_token: 'sdafadf',
+  fcm_type: 'web',
+
 });
 
-const signIn = () => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(payload.value.email)) {
+const signIn = async () => {
+  const usernameRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!usernameRegex.test(payload.value.username)) {
     console.error('Invalid email address');
     return;
   }
@@ -58,8 +59,8 @@ const signIn = () => {
     console.error('Password must be at least 6 characters long');
     return;
   }
-
-  console.log('Signing in with:', payload.value.email, payload.value.password);
+  await jwtStore.getJWT(payload.value)
+  console.log('Signing in with:', payload.value.username, payload.value.password);
 };
 
 
@@ -100,7 +101,7 @@ const signIn = () => {
 
 .container {
   display: flex;
-  height:100%;
+  height: 100%;
   width: 100%;
   max-width: 100%;
 }
@@ -110,18 +111,16 @@ const signIn = () => {
   background-image: url('../../assets/icons/background.png');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
-  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 40px;
 }
 
 .right-half {
   width: 35%;
   background-color: #ffffff;
-  margin-bottom: 20px;
 }
 
 .login-form {
@@ -175,8 +174,13 @@ const signIn = () => {
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 0em;
+  transition: box-shadow 0.3s ease;
+  /* Add transition for smooth effect */
+}
 
-
+.login-form button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Add box shadow on hover */
 }
 
 
@@ -187,7 +191,8 @@ const signIn = () => {
 
 .image-container {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 

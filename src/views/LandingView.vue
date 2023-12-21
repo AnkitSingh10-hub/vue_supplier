@@ -8,6 +8,9 @@ import ReachIcon from '@/assets/icons/reach.png'
 import SuppliersIcon from '@/assets/icons/suppliers.png'
 import DownloadsIcon from '@/assets/icons/downloads.png'
 import ActivitiesIcon from '@/assets/icons/activities.png'
+import { useJwtStore } from '@/stores/jwt'
+
+const jwtStore = useJwtStore()
 </script>
 
 <template>

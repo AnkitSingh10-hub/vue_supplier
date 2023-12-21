@@ -1,5 +1,5 @@
 export enum Action {
-  API = 'api/',
+  API = '',
 
   Token = 'users/jwt',
   RefreshToken = 'users/jwt/refresh',
