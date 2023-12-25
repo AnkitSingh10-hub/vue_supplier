@@ -235,5 +235,13 @@ h4 {
     height: auto;
 
   }
-}
-</style>
+
+  .heading {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 10px;
+  }
+
+}</style>

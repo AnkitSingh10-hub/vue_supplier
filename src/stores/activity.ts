@@ -33,4 +33,3 @@ export const useActivityStore = defineStore('activity', {
 
   }
 })
-

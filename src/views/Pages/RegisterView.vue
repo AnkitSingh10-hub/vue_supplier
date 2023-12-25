@@ -43,6 +43,4 @@ body {
   display: flex;
   height: 100vh;
 }
-
-
 </style>

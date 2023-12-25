@@ -23,10 +23,10 @@
           <aside class="flex flex-col gap-2 px-2">
             <p class="text-lg font-medium">{{ activity.sServiceName }}</p>
             <p class="text-lg font-medium">{{ activity.detail }}</p>
-            <p class="text-lg font-medium">{{ activity.startingDiscountedPrice }}</p>
+            <p class="text-lg font-medium">{{ activity.discountedStartingPrice }}</p>
 
           </aside>
-          <button @click="() => {
+          <button style="pointer:cursor;" @click="() => {
             $router.push({
               name: 'activitydetail',
               params: {
