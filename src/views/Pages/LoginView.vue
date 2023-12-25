@@ -6,7 +6,7 @@
       <h4>Become a part of Trip Turbo’s network of suppliers in just a few clicks away.<br>
         Sign up now and begin revolutionizing the way Nepal travels.</h4>
       <div class="image-container">
-        <img src="../../assets/icons/loginpersonimage.png" alt="Description of the image">
+        <img class="image-cover" src="../../assets/icons/loginpersonimage.png" alt="Description of the image">
       </div>
     </div>
 
@@ -16,10 +16,10 @@
 
 
         <input class="check" type="username" id="username" v-model="payload.username" required
-          placeholder="Enter username" style="padding: 17px">
+          placeholder="Enter username">
 
         <input class="check" type="password" id="password" v-model="payload.password" required
-          placeholder="Enter Password" style="padding:17px">
+          placeholder="Enter Password">
         <a class="pass" href="#">Forgot Password?</a>
 
         <br>
@@ -243,5 +243,27 @@ h4 {
   h4 {
     font-size: 10px;
   }
+  .image-container{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right:20px;
+  
+}
+.image-cover{
+  padding: 10px 10px;
+}
 
-}</style>
+#logo{
+  height: 30px;
+}
+.login-form input {
+
+  width: 80%;
+ 
+  padding: 10px;
+
+}
+}
+</style>
