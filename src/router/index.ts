@@ -70,11 +70,11 @@ const router = createRouter({
       path: '/accountcreated',
       component: () => import('../views/Pages/CongratsAccountCreated.vue')
     },
-    // {
-    //   name: 'activitysection',
-    //   path: '/activitysection',
-    //   component: () => import('../views/Pages/ActivitySection.vue')
-    // },
+    {
+      name: 'supplierdashboard',
+      path: '/supplierdashboard',
+      component: () => import('../views/Pages/SupplierDashboard.vue')
+    },
   ]
 })
 

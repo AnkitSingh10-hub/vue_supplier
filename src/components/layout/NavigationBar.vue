@@ -13,11 +13,14 @@
     <RouterLink class="font-[Poppins] text-lg font-semibold" to="/activities">
       Activities
     </RouterLink>
-    <RouterLink class="font-[Poppins] text-lg font-semibold" to="/activitysection">
+    <RouterLink class="font-[Poppins] text-lg font-semibold" to="/getstarted">
       Activity Section
     </RouterLink>
     <RouterLink class="font-[Poppins] text-lg font-semibold" to="/accountcreated">
       Account Created
+    </RouterLink>
+    <RouterLink class="font-[Poppins] text-lg font-semibold" to="/supplierdashboard">
+SupplierDashboard
     </RouterLink>
     <RouterLink to="/login">
 <div class="flex" v-if="!jwtStore.isLoggedIn">
