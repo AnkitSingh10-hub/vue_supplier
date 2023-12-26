@@ -1,5 +1,6 @@
 <template>
   <h1>This is a login view</h1>
+  <q-input v-model="text" label="Standard" />
   <div class="left-panel">
     <h2>This is the left panel</h2>
     <img src="" alt="Your Image">
@@ -14,12 +15,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useJwtStore } from '@/stores/jwt'
+import {QInput} from 'quasar'
 
-
-useMeta({
-  title: 'Login'
-})
+// useMeta({
+//   title: 'Login'
+// })
 const JwtStore = useJwtStore()
+const text = ref('')
 
 </script>
 

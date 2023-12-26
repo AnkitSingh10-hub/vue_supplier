@@ -60,6 +60,21 @@ const router = createRouter({
       path: '/activity-detail/:id',
       component: () => import('../views/Pages/ActivityDetail.vue')
     },
+    {
+      name: 'getstarted',
+      path: '/getstarted',
+      component: () => import('../views/Pages/GetStarted.vue')
+    },
+    {
+      name: 'accountcreated',
+      path: '/accountcreated',
+      component: () => import('../views/Pages/CongratsAccountCreated.vue')
+    },
+    // {
+    //   name: 'activitysection',
+    //   path: '/activitysection',
+    //   component: () => import('../views/Pages/ActivitySection.vue')
+    // },
   ]
 })
 

@@ -243,27 +243,27 @@ h4 {
   h4 {
     font-size: 10px;
   }
-  .image-container{
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right:20px;
-  
-}
-.image-cover{
-  padding: 10px 10px;
-}
 
-#logo{
-  height: 30px;
-}
-.login-form input {
+  .image-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 
-  width: 80%;
- 
-  padding: 10px;
+  }
 
-}
+  .image-cover {
+    padding: 10px 10px;
+  }
+
+  #logo {
+    height: 30px;
+  }
+
+  .login-form input {
+    width: 80%;
+    padding: 10px;
+  }
 }
 </style>
