@@ -1,39 +1,119 @@
 <template>
     <div class="container">
         <div class="sidebar">
-            <div class="img-tripturbo">
 
-                <img :src="tripTurbo" class="mx-3 pb-2" />
-
-
-            </div>
             <div class="sidebar-list">
-                <p class="sidebar-menu">
-                    <img src="../../assets/icons/img2.png" class="img" />
-                    Dash board
-                </p>
-                <p class="sidebar-menu">
-                    <img src="../../assets/icons/img1.png" class="img" />
-                    Inventory
-                </p>
-                <p class="sidebar-menu">
-                    <img src="../../assets/icons/img3.png" class="img" />
-                    Bookings
-                </p>
+
+                <q-tabs v-model="innerTab" vertical>
+                    <q-tab class="tabs" name="innerMails">
+                        <p class="sidebar-heading">My service photos</p>
+                        <p class="sidebar-heading">Includes multiples images</p>
+                    </q-tab>
+
+                    <q-tab class="tabs" name="innerAlarms">
+                        <p class="sidebar-heading2">option2</p>
+
+                    </q-tab>
+
+                    <q-tab class="tabs" name="innerMovies"> option 3</q-tab>
+
+                </q-tabs>
+
+
             </div>
         </div>
-        <div class="header">
-            <div class="inputText">
-                <input type="text" v-model="searchQuery" placeholder="Search" class="search" />
+
+
+        <div class="rightside">
+            <h1 class="heading">ADD BUSINESS SCHEDULE</h1>
+
+            <p class="para">In this section, suppliers are clearly required to load the correct time and day about their
+                business activities</p>
+
+            <hr class="underline">
+
+            <h2 class="second-header"> At what time does your service open and close?</h2>
+
+            <p class="second-para"> In this part, the suppliers are required to provide their service opening time and
+                closing time. </p>
+
+            <div class="inputs">
+
+                <div class="first-input"> <input class="input-field" type="text" placeholder="Opening Time">
+
+                    <img class="input-icon" src="../../assets/icons/clock.png" alt="Icon">
+
+                </div>
+
+                <div class="second-input"><input class="input-field" type="text" placeholder="Closing Time">
+                    <img class="input-icon" src="../../assets/icons/clock.png" alt="Icon">
+                </div>
+
+
             </div>
-            <div class="main">
-                <h1>dajijadijiaaoi</h1>
+
+            <h2 class="third-heading">In which day does your service open each week?</h2>
+            <p class="second-para">In this part, the suppliers are required to select the day on which the service opens.
+            </p>
+
+            <div class="checkboxes">
+
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
+                        value="option1">
+
+                    <label for="option4">
+                        Option 4
+                    </label>
+                </div>
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
+                        value="option1">
+
+                    <label for="option4">
+                        Option 4
+                    </label>
+                </div>
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
+                        value="option1">
+
+                    <label for="option4">
+                        Option 4
+                    </label>
+                </div>
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
+                        value="option1">
+
+                    <label for="option4">
+                        Option 4
+                    </label>
+                </div>
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
+                        value="option1">
+
+                    <label for="option4">
+                        Option 4
+                    </label>
+                </div>
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
+                        value="option1">
+
+                    <label for="option4">
+                        Option 4
+                    </label>
+                </div>
+
             </div>
+
+
+            <div class="button-container">
+                <button class="next-button">Next &nbsp;<img style="display:inline;" src="../../assets/icons/Vector.png"
+                        alt="" class="src"></button>
+            </div>
+
         </div>
     </div>
 </template>
-  
-<script setup>
+<script setup lang="ts">
+
 import { ref } from 'vue'
 import tripTurbo from '@/assets/icons/tripTurbo.png'
 import home from '@/assets/icons/home.png'
@@ -44,37 +124,195 @@ const searchQuery = ref('')
 </script>
   
 <style scoped>
-.container {
-    display: flex;
-    background: #e9e4e4;
+.next-button {
+    background-color: #FF9395;
+    color: white;
+    margin-right: 50px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
 
-    max-width: max-content;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.para {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+label {
+    position: relative;
+    top: -5px;
+}
+
+.individual-checks {
+    height: 24px;
+    width: 24px;
+    border: 1px groove #B1B1B1;
+}
+
+.input-checks {
+    position: relative;
+    top: -2px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+hr {
+    border-color: darkgrey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.heading {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.second-header {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.input-field {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #B1B1B1;
+    border-radius: 5px;
+}
+
+.second-para {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.first-input {
+    margin-right: 30px;
+    flex: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: auto;
+}
+
+
+.second-input {
+    margin-right: 30px;
+    flex: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
 
 
 }
 
-.header {
-    margin-right: 19%;
-    height: 70px;
+.third-heading {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+
+.tabs {
+    margin: 5px 20px;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    border-radius: 5px;
+    background-color: #EA2127;
+    color: white;
+
+}
+
+.container {
+    display: flex;
+    background: #F2F2F2;
+    max-width: 100%;
+    height: 80vh;
+
+}
+
+.rightside {
+    margin-left: 20%;
+    width: 100%;
+    padding: 15px;
 }
 
 .inputText {
-    margin-top: 20px;
-
+    width: 100%;
+    margin-top: 2rem;
 }
 
 .search {
-    top: 20;
-    width: 1130px;
+    width: 100%;
+    top: 20px;
     height: 70px;
-    flex-shrink: 0;
     border-radius: 5px;
     background: #fff;
     border: 1px solid black;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
-    margin-left: 3%;
+    margin: 0 auto;
     border: none;
+
 }
+
 
 .search::placeholder {
 
@@ -91,11 +329,11 @@ const searchQuery = ref('')
 }
 
 .sidebar {
-
+    position: fixed;
     width: 250px;
-    height: 1024px;
     flex-shrink: 0;
     background-color: #fff;
+
 }
 
 .main {
@@ -108,44 +346,98 @@ const searchQuery = ref('')
 
 }
 
-.img-tripturbo {
-
-    /*  */
-    color: #000;
-    font-family: Roboto;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #EA2127;
-    font-family: Roboto;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    margin-right: 20px;
-
-
-}
-
-
-
 .sidebar-menu {
     display: flex;
-
     color: #9E9E9E;
     font-family: Mona Sans;
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-left: 30%;
+    margin-left: 20%;
     padding: 15px 0;
+    align-content: left;
+    flex-direction: column;
 }
 
 .img {
     padding-right: 10px;
 }
 
-.searchincon {}
+.qtab {
+    background-color: #e9e4e4;
+}
+
+.qtabheading {
+    border-radius: 5px;
+    background: #ea2127;
+}
+
+
+.checkboxes {
+    margin-top: 30px;
+    margin-right: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.checkboxes {
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .rightside {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .inputs {
+        flex-direction: column;
+    }
+
+    .first-input,
+    .second-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .checkboxes {
+        margin-top: 30px;
+        margin-right: 0;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sidebar-list {
+        padding: 15px;
+    }
+
+    .tabs {
+        margin: 5px 0;
+    }
+
+    .sidebar-heading,
+    .sidebar-heading2,
+    .third-heading {
+        font-size: 16px;
+    }
+
+    .para,
+    .second-para {
+        font-size: 14px;
+    }
+}
 </style>

@@ -10,8 +10,8 @@
         class="h-[32px] md:h-[36px] lg:h-[40px]"
       />
     </RouterLink>
-    <RouterLink class="font-[Poppins] text-lg font-semibold" to="/activities">
-      Activities
+    <RouterLink class="font-[Poppins] text-lg font-semibold" to="/supplierdashboard">
+      SupplierDashboard
     </RouterLink>
     <RouterLink class="font-[Poppins] text-lg font-semibold" to="/getstarted">
       Activity Section
@@ -19,9 +19,8 @@
     <RouterLink class="font-[Poppins] text-lg font-semibold" to="/accountcreated">
       Account Created
     </RouterLink>
-    <RouterLink class="font-[Poppins] text-lg font-semibold" to="/supplierdashboard">
-SupplierDashboard
-    </RouterLink>
+    <RouterLink class="font-[Poppins] text-lg font-semibold" to="/schedule">
+Schedule Dashboard   </RouterLink>
     <RouterLink to="/login">
 <div class="flex" v-if="!jwtStore.isLoggedIn">
   <SignInButton />
