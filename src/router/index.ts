@@ -73,7 +73,7 @@ const router = createRouter({
     {
       name: 'supplierdashboard',
       path: '/supplierdashboard',
-      component: () => import('../views/Pages/SupplierDashboard.vue')
+      component: () => import('../views/Pages/AddBusinessSchedule.vue')
     },
     {
       name: 'schedule',
