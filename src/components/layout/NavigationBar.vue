@@ -10,8 +10,9 @@
         class="h-[32px] md:h-[36px] lg:h-[40px]"
       />
     </RouterLink>
-    <RouterLink class="font-[Poppins] text-lg font-semibold" to="/supplierdashboard">
-      SupplierDashboard
+  
+    <RouterLink class="font-[Poppins] text-lg font-semibold sm:nav-hidden " to="/schedule">
+      Schedule 
     </RouterLink>
     <RouterLink class="font-[Poppins] text-lg font-semibold" to="/getstarted">
       Activity Section
@@ -19,8 +20,11 @@
     <RouterLink class="font-[Poppins] text-lg font-semibold" to="/accountcreated">
       Account Created
     </RouterLink>
-    <RouterLink class="font-[Poppins] text-lg font-semibold" to="/schedule">
-Schedule Dashboard   </RouterLink>
+    <RouterLink class="font-[Poppins] text-lg font-semibold" to="/questions">
+Questions </RouterLink>
+
+
+  
     <RouterLink to="/login">
 <div class="flex" v-if="!jwtStore.isLoggedIn">
   <SignInButton />
@@ -44,3 +48,9 @@ import {useRoute,useRouter} from 'vue-router'
 import TripTurboLogo from '../../assets/icons/tripTurbo.png'
 const jwtStore = useJwtStore()
 </script>
+
+<style scoped>
+.nav-hidden{
+  display: none;
+}
+</style>

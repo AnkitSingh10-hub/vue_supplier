@@ -71,14 +71,14 @@ const router = createRouter({
       component: () => import('../views/Pages/CongratsAccountCreated.vue')
     },
     {
-      name: 'supplierdashboard',
-      path: '/supplierdashboard',
+      name: 'schedule',
+      path: '/schedule',
       component: () => import('../views/Pages/AddBusinessSchedule.vue')
     },
     {
-      name: 'schedule',
-      path: '/schedule',
-      component: () => import('../views/Pages/ScheduleView.vue')
+      name: 'questions',
+      path: '/questions',
+      component: () => import('../views/Pages/QuestionsView.vue')
     },
     
   ]

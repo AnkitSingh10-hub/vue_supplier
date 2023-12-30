@@ -125,7 +125,7 @@ const searchQuery = ref('')
   
 <style scoped>
 .next-button {
-    background-color: #FF9395;
+    background-color: #EA2127;
     color: white;
     margin-right: 50px;
     padding: 10px 30px 10px 30px;
@@ -391,6 +391,8 @@ hr {
     .container {
         flex-direction: column;
         height: auto;
+        overflow-x: hidden; 
+
     }
 
     .rightside {

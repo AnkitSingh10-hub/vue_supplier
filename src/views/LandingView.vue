@@ -15,6 +15,7 @@ const jwtStore = useJwtStore()
 
 <template>
   <div class="w-[100vw] min-h-[80vh] overflow-x-hidden">
+    <h2 class="block sm:hidden">this should be hidden when the size is less than lg</h2>
     <LandingCarousel />
     <section class="font-[Poppins] py-[30px] lg:py-[40px] xl:py-[60px] w-full">
       <h2 class="uppercase text-2xl md:text-[28px] xl:text-[32px] font-bold text-center">
