@@ -37,12 +37,12 @@
 
 .img-label {
     margin-top: 20px;
-    width: 60%;
     display: block;
     margin-top: 30px;
     margin-right: auto;
     margin-bottom: auto;
     margin-left: auto;
+    transform: scale(0.72);
 
 }
 

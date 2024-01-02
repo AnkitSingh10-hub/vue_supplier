@@ -85,6 +85,12 @@ const router = createRouter({
       path: '/policy',
       component: () => import('../views/Pages/PolicyView.vue')
     },
+    {
+      name: 'sucess-enrollment',
+      path: '/sucess-enrollment',
+      component: () => import('../views/Pages/EnrollmentSucess.vue')
+    },
+    
     
   ]
 })

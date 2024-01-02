@@ -35,14 +35,16 @@
 
                 <div class="default-booking-policy">
                     <h1> Default Booking Policy</h1>
-                    <p>Customers can book your service up to 12 hours before the start time of your activity.</p>
+                    <p> <img id="tick" src="/src/assets/icons/tick.png" alt="Icon">&nbsp;Customers can book your service up
+                        to 12 hours before the start time of your activity.</p>
                 </div>
 
                 <h1 class="mini-headings"> Do you wish to follow the booking policy recommended by Tripturbo? </h1>
 
                 <div class="checkboxes">
                     <label>
-                        <input type="radio" name="option" value="option1">&nbsp;&nbsp;Yes - <span> It means you want to
+                        <input type="radio" style="background-color: red;" name="option" value="option1">&nbsp;&nbsp;Yes -
+                        <span> It means you want to
                             proceed
                             with the
                             policy according to Tripturbo</span>
@@ -89,8 +91,12 @@
 
                 <div class="default-booking-policy">
                     <h1> Default Cancellation Policy</h1>
-                    <p>Customers who cancel bookings before 4 days will get 100% refund</p>
-                    <p>Customers who cancel bookings before 3 days will get 80% refund</p>
+                    <p><img id="tick" src="/src/assets/icons/tick.png" alt="Icon">&nbsp;Customers who cancel bookings before
+                        4
+                        days will get 100% refund</p>
+                    <p><img id="tick" src="/src/assets/icons/tick.png" alt="Icon">&nbsp;Customers who cancel bookings before
+                        3
+                        days will get 80% refund</p>
                 </div>
 
 
@@ -174,10 +180,10 @@
 
                 </div>
 
-                <div class="cancellation-button-div"><img class="input-icon-plus" src="/src/assets/icons/plus.png"
-                        alt="Icon">
+                <div class="cancellation-button-div">
 
-                    <button class="add-new-cancellation">Add New Cancellation</button>
+                    <button class="add-new-cancellation"><img class="input-icon-plus" src="/src/assets/icons/plus.png"
+                            alt="Icon">Add New Cancellation</button>
                 </div>
 
 
@@ -209,6 +215,13 @@
     position: relative;
 }
 
+#tick {
+    display: inline;
+    position: relative;
+    top: -2.1px;
+    left: -1px;
+}
+
 #bottom-line {
     color: #B1B1B1;
     border: 1.5px solid;
@@ -228,6 +241,20 @@
     position: relative;
     margin-bottom: 20px;
 }
+
+input[type='radio'] {
+    color: blue;
+    accent-color: red;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+    border-radius: 50%;
+    transform: scale(1.4);
+
+}
+
 
 .select-options,
 .select-options-one {
@@ -252,7 +279,7 @@ hr {
     border: 1px solid #EA2127;
     background-color: transparent;
     color: #EA2127;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 10px 12px 40px;
     margin-top: 10px;
     margin-bottom: 30px;
     font-family: Poppins;
@@ -372,6 +399,7 @@ input {
     width: 20px;
     height: auto;
 }
+
 .input-icon-plus {
     position: absolute;
     top: 2.3rem;
@@ -403,7 +431,7 @@ input {
     left: 0;
     top: 70px;
 
-    bottom: 0px;
+    bottom: 50px;
     background-color: white;
     z-index: -1;
     display: flex;
@@ -415,11 +443,8 @@ input {
     width: 80%;
     background-color: #F2F2F2;
     margin-left: auto;
-    padding-left: 20px;
+    padding-left: 35px;
     padding-right: 30px;
-    margin-bottom: 20px;
-
-
 }
 
 .heading {
@@ -452,6 +477,7 @@ input {
     line-height: normal;
     margin-top: 15px;
     margin-bottom: 13px;
+    padding-bottom: 10px;
 }
 
 .button-container {

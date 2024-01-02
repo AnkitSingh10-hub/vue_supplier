@@ -25,6 +25,9 @@ Questions </RouterLink>
 <RouterLink class="font-[Poppins] text-lg font-semibold" to="/policy">
 Policy </RouterLink>
 
+<RouterLink class="font-[Poppins] text-lg font-semibold" to="/enrollment-success">
+Enrollment Success </RouterLink>
+
 
   
     <RouterLink to="/login">
