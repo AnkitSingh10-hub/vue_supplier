@@ -22,6 +22,8 @@
     </RouterLink>
     <RouterLink class="font-[Poppins] text-lg font-semibold" to="/questions">
 Questions </RouterLink>
+<RouterLink class="font-[Poppins] text-lg font-semibold" to="/policy">
+Policy </RouterLink>
 
 
   

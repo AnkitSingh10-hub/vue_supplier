@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="contain">
         <div class="sidebar">
 
             <div class="sidebar-list">
@@ -142,6 +142,7 @@ const searchQuery = ref('')
 .button-container {
     display: flex;
     justify-content: flex-end;
+    
 }
 
 .para {
@@ -281,7 +282,7 @@ hr {
 
 }
 
-.container {
+.contain {
     display: flex;
     background: #F2F2F2;
     max-width: 100%;
@@ -333,6 +334,7 @@ hr {
     width: 250px;
     flex-shrink: 0;
     background-color: #fff;
+   
 
 }
 
@@ -419,9 +421,7 @@ hr {
         row-gap: 10px;
     }
 
-    .button-container {
-        justify-content: center;
-    }
+    
 
     .next-button {
         margin-right: 0;

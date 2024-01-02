@@ -80,6 +80,11 @@ const router = createRouter({
       path: '/questions',
       component: () => import('../views/Pages/QuestionsView.vue')
     },
+    {
+      name: 'policy',
+      path: '/policy',
+      component: () => import('../views/Pages/PolicyView.vue')
+    },
     
   ]
 })
