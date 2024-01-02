@@ -167,17 +167,12 @@ input {
 }
 
 .lefthalf-sidebar {
-    width: 20%;
-    position: fixed;
-    left: 0;
+    position: sticky;
+    width: 250px;
+    background-color: #FFF;
+    height: 40rem;
     top: 70px;
-
-    bottom: 0px;
-    background-color: white;
-    z-index: -1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    left: 10px;
 }
 
 .righthalf {

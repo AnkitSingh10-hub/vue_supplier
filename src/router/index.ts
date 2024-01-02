@@ -86,8 +86,8 @@ const router = createRouter({
       component: () => import('../views/Pages/PolicyView.vue')
     },
     {
-      name: 'sucess-enrollment',
-      path: '/sucess-enrollment',
+      name: 'success-enrollment',
+      path: '/success-enrollment',
       component: () => import('../views/Pages/EnrollmentSucess.vue')
     },
     

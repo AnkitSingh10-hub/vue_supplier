@@ -15,6 +15,19 @@
                 </q-tab>
 
                 <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
 
             </q-tabs>
 
@@ -63,15 +76,16 @@
 
                 <p class="note">Note: Suppose you have entered ‘8 in duration’ and selected ‘hour in time unit’, it means
                     your customers
-                    need to book 8 hour in advance to use your service of
-                    desired time. eg: For boating, a customer wishes to book a time slot from 10:00 AM to 11:00 AM tomorrow.
-                    Therefore, they can only make a booking for the
-                    boating service up to 8 hours before this time or even earlier. <br>
+                    need to book 8 hour in advance to use your service of desired time. eg: For boating, a customer wishes
+                    to book a time slot from 10:00 AM to 11:00 AM tomorrow.
+                    Therefore, they can only make a booking for the boating service up to 8 hours before this time or
+                    even earlier. <br>
                     Suppose you have entered ‘2 in duration’ and selected ‘day in time unit’, it means your customers need
-                    to book 2 day in advance to use your service of
+                    to book 2 day in advance to use your <br> service of
                     desired time. eg: For boating, a customer wishes to reserve a time slot from 10:00 AM to 11:00 AM on
                     Monday. Therefore, they can only make a booking for the
                     boating service starting from Saturday, two days before the desired time or even earlier.</p>
+
 
                 <div class="input-fields">
                     <img class="input-icon" src="/src/assets/icons/question.png" alt="Icon">
@@ -156,8 +170,8 @@
 
 
                 <p class="note">Note: If you enter "80% for refund," "3 for duration," and "days for the time unit," it
-                    means customers will receive an 80% refund from their total amount if
-                    they cancel their booking three days before their activity time.
+                    means customers will receive an 80% refund from their<br>total amount if
+                    they cancel their booking three days before their activity time.<br>
                     “You can either create multiple cancellation policies or just a single one.”</p>
 
                 <div class="input-fields">
@@ -320,6 +334,8 @@ hr {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .default-booking-policy h1 {
@@ -426,17 +442,13 @@ input {
 }
 
 .lefthalf-sidebar {
-    width: 20%;
-    position: fixed;
-    left: 0;
+    position: sticky;
+    width: 250px;
+    background-color: #FFF;
+    height: 40rem;
     top: 70px;
+      overflow-y: auto;
 
-    bottom: 50px;
-    background-color: white;
-    z-index: -1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 .righthalf {
@@ -505,8 +517,7 @@ input {
 .back-button {
     background-color: white;
     color: #EA2127;
-    ;
-    margin-right: 50px;
+    margin-right: 20px;
     padding: 10px 30px 10px 30px;
     border-radius: 5px;
     font-family: Poppins;
@@ -516,5 +527,86 @@ input {
     letter-spacing: 0em;
     text-align: left;
 
+}
+@media screen and (max-width: 768px) {
+    .contain {
+        flex-direction: column;
+    }
+
+    .lefthalf-sidebar {
+        position: static;
+        width: 100%;
+        top: 0;
+        height: auto;
+        margin-bottom: 20px; /* Add some spacing between lefthalf-sidebar and righthalf */
+    }
+
+    .righthalf {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Additional responsive styles */
+    .heading {
+        font-size: 1.4em;
+    }
+
+    .booking-header {
+        font-size: 18px;
+    }
+
+    .service-question {
+        font-size: 1em;
+    }
+
+    .mini-headings {
+        font-size: 1.2em;
+        padding-top: 5px;
+        padding-bottom: 2px;
+    }
+
+    .input-fields input,
+    .input-fields select,
+    .cancellation-button-div button {
+        width: 100%;
+    }
+
+    .note {
+        font-size: 12px;
+    }
+
+    .default-booking-policy p {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .checkboxes span {
+        font-size: 14px;
+    }
+
+    .add-new-cancellation {
+        font-size: 16px;
+        padding: 10px 10px 10px 30px;
+    }
+
+    .input-icon,
+    .input-icon-plus {
+        top: 1.5rem;
+        left: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .next-button,
+    .back-button {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Add more responsive styles as needed for other elements */
 }
 </style>

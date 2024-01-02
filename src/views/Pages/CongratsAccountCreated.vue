@@ -14,8 +14,7 @@
 <style scoped>
 button {
     background-color: #EA2127;
-    width: 300px;
-    height: 50px;
+    padding: 10px 70px;
     top: 517px;
     left: 570px;
     border-radius: 5px;
@@ -39,7 +38,7 @@ h1 {
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
 
 }
 
@@ -49,7 +48,7 @@ p {
     font-weight: 500;
     line-height: 27px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
 
 }
 
@@ -65,7 +64,10 @@ p {
     margin-top: 30px;
     width: 200px;
     margin-bottom: 20px;
+    position:relative;
+    left:10px;
 }
+
 @media (max-width: 768px) {
     button {
         width: 50%;
