@@ -89,4 +89,5 @@ import SocialIconsComponent from '@/components/layout/SocialIconsComponent.vue'
 .links:hover {
   background-size: 100% 2px;
 }
+
 </style>

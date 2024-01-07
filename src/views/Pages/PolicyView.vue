@@ -17,17 +17,7 @@
                 <q-tab name="innerMovies"> option 3</q-tab>
                 <q-tab name="innerMovies"> option 3</q-tab>
                 <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
+
 
             </q-tabs>
 
@@ -88,8 +78,7 @@
 
 
                 <div class="input-fields">
-                    <img class="input-icon" src="/src/assets/icons/question.png" alt="Icon">
-                    <input type="text" placeholder="Enter Time Duration">
+                    <input class="input-with-logo" type="text" placeholder="Enter Time Duration">
 
                     <select class="select-options" id="dropdown" name="dropdown">
                         <option value="" disabled selected>Select time unit</option>
@@ -137,9 +126,8 @@
                     their activity time.</p>
 
                 <div class="input-fields">
-                    <img class="input-icon" src="/src/assets/icons/question.png" alt="Icon">
 
-                    <input type="text" placeholder="Enter Time Duration">
+                    <input class="input-with-logo" type="text" placeholder="Enter Time Duration">
 
                     <select class="select-options" id="dropdown" name="dropdown">
                         <option value="" disabled selected>Select time unit</option>
@@ -175,15 +163,15 @@
                     “You can either create multiple cancellation policies or just a single one.”</p>
 
                 <div class="input-fields">
-                    <select class="select-options-one" id="dropdown" name="dropdown">
-                        <option value="" disabled selected>Select time unit</option>
+                    <select class="select-options-one input-with-logo-two" id="dropdown" name="dropdown">
+                        <option value="" disabled selected>Enter Refund</option>
                         <option value="option1">Option 1</option>
                         <option value="option2">Option 2</option>
                         <option value="option3">Option 3</option>
                     </select>
 
 
-                    <input type="text" placeholder="Enter Time Duration">
+                    <input class="input-with-logo" type="text" placeholder="Enter Time Duration">
 
                     <select class="select-options" id="dropdown" name="dropdown">
                         <option value="" disabled selected>Select time unit</option>
@@ -196,8 +184,7 @@
 
                 <div class="cancellation-button-div">
 
-                    <button class="add-new-cancellation"><img class="input-icon-plus" src="/src/assets/icons/plus.png"
-                            alt="Icon">Add New Cancellation</button>
+                    <button class="add-new-cancellation">Add New Cancellation</button>
                 </div>
 
 
@@ -228,6 +215,24 @@
 .cancellation-button-div {
     position: relative;
 }
+.input-with-logo
+ {
+      background-image: url('../../assets/icons/clock.png'); 
+      background-size: 20px 20px; 
+      background-repeat: no-repeat;
+      background-position: 14px center;
+      
+    
+}
+.input-with-logo-two
+ {
+      background-image: url('../../assets/icons/percent.png'); 
+      background-size: 20px 20px; 
+      background-repeat: no-repeat;
+      background-position: 14px center;    
+}
+
+
 
 #tick {
     display: inline;
@@ -407,25 +412,6 @@ input {
 
 }
 
-.input-icon {
-    position: absolute;
-    top: 1.9rem;
-    left: 20px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: auto;
-}
-
-.input-icon-plus {
-    position: absolute;
-    top: 2.3rem;
-    left: 15px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: auto;
-}
-
-
 .contain {
     display: flex;
     flex-direction: row;
@@ -447,7 +433,7 @@ input {
     background-color: #FFF;
     height: 40rem;
     top: 70px;
-      overflow-y: auto;
+    overflow-y: auto;
 
 }
 
@@ -528,6 +514,7 @@ input {
     text-align: left;
 
 }
+
 @media screen and (max-width: 768px) {
     .contain {
         flex-direction: column;
@@ -538,7 +525,7 @@ input {
         width: 100%;
         top: 0;
         height: auto;
-        margin-bottom: 20px; /* Add some spacing between lefthalf-sidebar and righthalf */
+        margin-bottom: 20px;
     }
 
     .righthalf {
@@ -547,7 +534,7 @@ input {
         padding-right: 15px;
     }
 
-    /* Additional responsive styles */
+
     .heading {
         font-size: 1.4em;
     }
@@ -566,11 +553,33 @@ input {
         padding-bottom: 2px;
     }
 
-    .input-fields input,
-    .input-fields select,
-    .cancellation-button-div button {
-        width: 100%;
+    .input-fields {
+        display: block;
+        margin-bottom: 20px;
     }
+
+    .input-fields input {
+        display: block;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .input-fields select {
+        display: block;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .add-new-cancellation {
+        display: block;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
 
     .note {
         font-size: 12px;
@@ -590,15 +599,12 @@ input {
         padding: 10px 10px 10px 30px;
     }
 
-    .input-icon,
-    .input-icon-plus {
-        top: 1.5rem;
-        left: 10px;
-    }
 
     .button-container {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
+
     }
 
     .next-button,
@@ -607,6 +613,5 @@ input {
         margin-bottom: 10px;
     }
 
-    /* Add more responsive styles as needed for other elements */
 }
 </style>

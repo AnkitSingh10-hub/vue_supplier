@@ -1,10 +1,10 @@
 <template>
-    <div class="container">
+    <div class="contain">
         <img class="checkmark" src="../../assets/icons/check.png" alt="">
         <h1>Congratulations!<br>
             Service Enrollment Completed</h1>
-        <p>You have successfully completed  onboarding your activity in TripTurbo,<br>
-once reviewed by our team you'll be notified.</p>
+        <p>You have successfully completed onboarding your activity in TripTurbo,<br>
+            once reviewed by our team you'll be notified.</p>
         <button>Done</button>
     </div>
 </template>
@@ -17,7 +17,7 @@ once reviewed by our team you'll be notified.</p>
 button {
     background-color: #EA2127;
     padding: 10px 60px;
-  
+
     border-radius: 5px;
     margin-top: 30px;
     font-family: Poppins;
@@ -53,7 +53,7 @@ p {
 
 }
 
-.container {
+.contain {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,11 +65,14 @@ p {
     margin-top: 30px;
     width: 200px;
     margin-bottom: 20px;
-    position:relative;
-    left:10px;
+    position: relative;
+    left: 10px;
 }
 
 @media (max-width: 768px) {
+
+    .contain {}
+
     button {
         width: 50%;
         font-size: 16px;
