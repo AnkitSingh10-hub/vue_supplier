@@ -33,46 +33,40 @@
                 <form class="form-container">
                     <div class="form-row">
                         <label for="field1">What safety gear do you provide?</label>
-                        <img class="input-icon" src="../../assets/icons/question.png" alt="Icon">
 
-                        <input type="text" id="field1" name="field1" placeholder="Enter answer" />
+                        <input class="input-logo" type="text" id="field1" name="field1" placeholder="Enter answer" />
 
                     </div>
                     <div class="form-row">
                         <label for="field2">Is the driver included in the boating service?
                         </label>
-                        <img class="input-icon" src="../../assets/icons/question.png" alt="Icon">
 
-                        <input type="text" id="field2" name="field2" placeholder="Enter answer" />
+                        <input class="input-logo" type="text" id="field2" name="field2" placeholder="Enter answer" />
                     </div>
                     <div class="form-row">
                         <label for="field3">Is there any kind of weight and number restriction?
                         </label>
-                        <img class="input-icon" src="../../assets/icons/question.png" alt="Icon">
 
-                        <input type="text" id="field3" name="field3" placeholder="Enter answer" />
+                        <input class="input-logo" type="text" id="field3" name="field3" placeholder="Enter answer" />
                     </div>
                     <div class="form-row">
                         <label for="field4">How frequently do you maintain/ inspect your boats for damages/ safety
                             protocols?</label>
-                        <img class="input-icon" src="../../assets/icons/question.png" alt="Icon">
 
-                        <input type="text" id="field4" name="field4" placeholder="Enter answer" />
+                        <input class="input-logo" type="text" id="field4" name="field4" placeholder="Enter answer" />
                     </div>
                     <div class="form-row">
                         <label for="field5">Can guests use the boat without the drivers? Does this violate any terms of the
                             SOP?
                         </label>
-                        <img class="input-icon" src="../../assets/icons/question.png" alt="Icon">
 
-                        <input type="text" id="field5" name="field5" placeholder="Enter answer" />
+                        <input class="input-logo" type="text" id="field5" name="field5" placeholder="Enter answer" />
                     </div>
                     <div class="form-row">
                         <label for="field6">Do you have an emergency evacuation procedure? If yes, provide the
                             details.</label>
-                        <img class="input-icon" src="../../assets/icons/question.png" alt="Icon">
 
-                        <input type="text" id="field6" name="field6" placeholder="Enter answer" />
+                        <input class="input-logo" type="text" id="field6" name="field6" placeholder="Enter answer" />
                     </div>
                 </form>
             </div>
@@ -117,6 +111,13 @@ hr {
     flex-direction: column;
     position: relative;
 
+}
+
+.input-logo {
+    background-image: url('../../assets/icons/question.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 14px center;
 }
 
 label {

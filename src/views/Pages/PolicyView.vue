@@ -215,21 +215,21 @@
 .cancellation-button-div {
     position: relative;
 }
-.input-with-logo
- {
-      background-image: url('../../assets/icons/clock.png'); 
-      background-size: 20px 20px; 
-      background-repeat: no-repeat;
-      background-position: 14px center;
-      
-    
+
+.input-with-logo {
+    background-image: url('../../assets/icons/clock.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 14px center;
+
+
 }
-.input-with-logo-two
- {
-      background-image: url('../../assets/icons/percent.png'); 
-      background-size: 20px 20px; 
-      background-repeat: no-repeat;
-      background-position: 14px center;    
+
+.input-with-logo-two {
+    background-image: url('../../assets/icons/percent.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 14px center;
 }
 
 
@@ -306,8 +306,15 @@ hr {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-
+    background-image: url('../../assets/icons/plus.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 14px center;
 }
+
+
+
+
 
 .checkboxes span {
     color: #000;
