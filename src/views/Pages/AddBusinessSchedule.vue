@@ -1,6 +1,6 @@
 <template>
     <div class="contain">
-        <div class="sidebar">
+        <!-- <div class="sidebar">
 
             <div class="sidebar-list">
 
@@ -21,6 +21,28 @@
 
 
             </div>
+        </div> -->
+
+        <div class="lefthalf-sidebar">
+
+            <q-tabs vertical>
+                <q-tab name="innerMails">
+                    <p class="sidebar-heading">My service photos</p>
+                    <p class="sidebar-heading">Includes multiples images</p>
+                </q-tab>
+
+                <q-tab name="innerAlarms">
+                    <p class="sidebar-heading2">option2</p>
+
+                </q-tab>
+
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+                <q-tab name="innerMovies"> option 3</q-tab>
+
+
+            </q-tabs>
+
         </div>
 
 
@@ -124,6 +146,24 @@ const searchQuery = ref('')
 </script>
   
 <style scoped>
+.lefthalf-sidebar {
+    position: sticky;
+    width: 250px;
+    background-color: #FFF;
+    height: 40rem;
+    top: 70px;
+    overflow-y: auto;
+
+}
+.rightside {
+    width: 80%;
+    background-color: #F2F2F2;
+    margin-left: auto;
+    padding-left: 35px;
+    padding-right: 30px;
+}
+
+
 .next-button {
     background-color: #EA2127;
     color: white;
@@ -142,7 +182,7 @@ const searchQuery = ref('')
 .button-container {
     display: flex;
     justify-content: flex-end;
-    
+
 }
 
 .para {
@@ -290,11 +330,6 @@ hr {
 
 }
 
-.rightside {
-    margin-left: 20%;
-    width: 100%;
-    padding: 15px;
-}
 
 .inputText {
     width: 100%;
@@ -334,7 +369,7 @@ hr {
     width: 250px;
     flex-shrink: 0;
     background-color: #fff;
-   
+
 
 }
 
@@ -393,7 +428,7 @@ hr {
     .container {
         flex-direction: column;
         height: auto;
-        overflow-x: hidden; 
+        overflow-x: hidden;
 
     }
 
@@ -421,7 +456,7 @@ hr {
         row-gap: 10px;
     }
 
-    
+
 
     .next-button {
         margin-right: 0;
@@ -443,5 +478,6 @@ hr {
 
     .tabs p {
         display: none;
-    }}
+    }
+}
 </style>

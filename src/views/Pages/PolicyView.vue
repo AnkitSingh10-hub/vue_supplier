@@ -194,7 +194,7 @@
 
 
             <div class="button-container">
-                <button class="back-button"><img style="display:inline;" src="../../assets/icons/Vector.png" alt=""
+                <button type="button" class="back-button"><img style="display:inline;" src="../../assets/icons/Vector.png" alt=""
                         class="src"> &nbsp; Back</button>
                 <button class="next-button">Next &nbsp;<img style="display:inline;" src="../../assets/icons/Vector-1.png"
                         alt="" class="src"></button>
@@ -208,7 +208,6 @@
 </template>
 
 <script setup lang="ts">
-
 </script>
 
 <style scoped>
