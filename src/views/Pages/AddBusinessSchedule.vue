@@ -11,7 +11,7 @@
                 </q-tab>
 
                 <q-tab name="innerAlarms">
-                    <p class="sidebar-heading2">option2</p>
+                    <p class="sidebar-heading">My service photos</p>
 
                 </q-tab>
 
@@ -37,14 +37,14 @@
 
             <div class="inputs">
 
-                <div class="first-input"> <input class="input-field" type="text" placeholder="Opening Time">
 
-                    <img class="input-icon" src="../../assets/icons/clock.png" alt="Icon">
+                <div class="first-input"> <input class="input-field" type="time" placeholder="Opening Time">
+
+                    <!-- <img class="input-icon" src="../../assets/icons/clock.png" alt="Icon"> -->
 
                 </div>
 
-                <div class="second-input"><input class="input-field" type="text" placeholder="Closing Time">
-                    <img class="input-icon" src="../../assets/icons/clock.png" alt="Icon">
+                <div class="second-input"><input class="input-field" type="time" placeholder="Closing Time">
                 </div>
 
 
@@ -239,10 +239,17 @@ hr {
 
 }
 
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background-image: url('../../assets/icons/clock.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
 .input-field {
     width: 100%;
     padding: 20px;
-    border: 1px solid #B1B1B1;
+    border: 1px solid hsl(0, 0%, 69%);
     border-radius: 5px;
     font-family: Poppins;
     font-size: 1.125em;
@@ -420,6 +427,13 @@ hr {
 
 .checkboxes {
     padding-bottom: 10px;
+}
+
+.sidebar-heading{
+    font-family: Poppins;
+font-weight: 600;
+line-height: 24px;
+
 }
 
 @media screen and (max-width: 768px) {
