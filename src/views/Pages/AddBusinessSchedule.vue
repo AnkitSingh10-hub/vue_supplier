@@ -80,46 +80,60 @@
 
             <div class="checkboxes">
 
-                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option1" name="option1"
                         value="option1">
 
-                    <label for="option4">
-                        Option 4
+                    <label for="option1">
+                        Sunday
+                    </label>
+                </div>
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option2" name="option2"
+                        value="option2">
+
+                    <label for="option2">
+                        Monday
+                    </label>
+                </div>
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option3" name="option3"
+                        value="option3">
+
+                    <label for="option3">
+                        Tuesday
                     </label>
                 </div>
                 <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
-                        value="option1">
+                        value="option4">
 
                     <label for="option4">
-                        Option 4
+                        Wednesday
                     </label>
                 </div>
-                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
-                        value="option1">
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option5" name="option5"
+                        value="option5">
 
-                    <label for="option4">
-                        Option 4
+                    <label for="option5">
+                        Thursday
                     </label>
                 </div>
-                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
-                        value="option1">
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option6" name="option6"
+                        value="option6">
 
-                    <label for="option4">
-                        Option 4
+                    <label for="option6">
+                        Friday
                     </label>
                 </div>
-                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
-                        value="option1">
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option7" name="option7"
+                        value="option7">
 
-                    <label for="option4">
-                        Option 4
+                    <label for="option7">
+                        Saturday
                     </label>
                 </div>
-                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option4" name="option4"
-                        value="option1">
+                <div class="input-checks"><input class="individual-checks" type="checkbox" id="option8" name="option8"
+                        value="option8">
 
-                    <label for="option4">
-                        Option 4
+                    <label for="option8">
+                        All of the above
                     </label>
                 </div>
 
@@ -127,7 +141,7 @@
 
 
             <div class="button-container">
-                <button class="next-button">Next &nbsp;<img style="display:inline;" src="../../assets/icons/Vector.png"
+                <button class="next-button">Next &nbsp;<img style="display:inline;" src="../../assets/icons/Vector-1.png"
                         alt="" class="src"></button>
             </div>
 
@@ -137,15 +151,15 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
-import tripTurbo from '@/assets/icons/tripTurbo.png'
-import home from '@/assets/icons/home.png'
-import invent from '@/assets/icons/invent.png'
-import book from '@/assets/icons/book.png'
 
 const searchQuery = ref('')
 </script>
   
 <style scoped>
+.contain {
+    display: flex;
+    flex-direction: row;
+}
 .lefthalf-sidebar {
     position: sticky;
     width: 250px;
@@ -176,6 +190,7 @@ const searchQuery = ref('')
     line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
+   
 
 }
 
@@ -225,12 +240,14 @@ hr {
 }
 
 .heading {
+    
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 1.6em;
     font-weight: 700;
     line-height: 36px;
     letter-spacing: 0em;
     text-align: left;
+    margin-top: 20px;
 
 }
 
@@ -241,6 +258,7 @@ hr {
     line-height: 27px;
     letter-spacing: 0em;
     text-align: left;
+    margin-bottom:8px;
 
 }
 
@@ -249,6 +267,12 @@ hr {
     padding: 20px;
     border: 1px solid #B1B1B1;
     border-radius: 5px;
+    font-family: Poppins;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    
 }
 
 .second-para {
@@ -258,6 +282,7 @@ hr {
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
+    margin-bottom:8px;
 
 }
 
@@ -297,6 +322,7 @@ hr {
     line-height: 27px;
     letter-spacing: 0em;
     text-align: left;
+    margin-bottom: 8px;
 
 }
 
@@ -304,6 +330,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 8px;
 
 }
 
@@ -322,13 +349,7 @@ hr {
 
 }
 
-.contain {
-    display: flex;
-    background: #F2F2F2;
-    max-width: 100%;
-    height: 80vh;
 
-}
 
 
 .inputText {
