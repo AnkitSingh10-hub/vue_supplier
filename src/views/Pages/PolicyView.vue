@@ -14,10 +14,7 @@
 
                 </q-tab>
 
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-
+            
 
             </q-tabs>
 
@@ -440,6 +437,7 @@ input {
     height: 40rem;
     top: 70px;
     overflow-y: auto;
+    margin-left: auto;
 
 }
 

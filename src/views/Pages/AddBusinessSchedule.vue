@@ -1,34 +1,13 @@
 <template>
     <div class="contain">
-        <!-- <div class="sidebar">
-
-            <div class="sidebar-list">
-
-                <q-tabs v-model="innerTab" vertical>
-                    <q-tab class="tabs" name="innerMails">
-                        <p class="sidebar-heading">My service photos</p>
-                        <p class="sidebar-heading">Includes multiples images</p>
-                    </q-tab>
-
-                    <q-tab class="tabs" name="innerAlarms">
-                        <p class="sidebar-heading2">option2</p>
-
-                    </q-tab>
-
-                    <q-tab class="tabs" name="innerMovies"> option 3</q-tab>
-
-                </q-tabs>
-
-
-            </div>
-        </div> -->
+       
 
         <div class="lefthalf-sidebar">
 
             <q-tabs vertical>
                 <q-tab name="innerMails">
-                    <p class="sidebar-heading">My service photos</p>
-                    <p class="sidebar-heading">Includes multiples images</p>
+                    <p class="sidebar-heading">My service photos<br>Includes multiples images</p>
+                
                 </q-tab>
 
                 <q-tab name="innerAlarms">
@@ -36,10 +15,7 @@
 
                 </q-tab>
 
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-                <q-tab name="innerMovies"> option 3</q-tab>
-
+        
 
             </q-tabs>
 
@@ -167,6 +143,8 @@ const searchQuery = ref('')
     height: 40rem;
     top: 70px;
     overflow-y: auto;
+    margin-left: auto;
+
 
 }
 .rightside {
