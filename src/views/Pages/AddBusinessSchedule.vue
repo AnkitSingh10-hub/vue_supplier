@@ -128,7 +128,6 @@
 
 import { ref } from 'vue'
 
-const searchQuery = ref('')
 </script>
   
 <style scoped>

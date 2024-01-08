@@ -28,8 +28,6 @@ button {
     color: white;
     margin-bottom: 16%;
 
-
-
 }
 
 h1 {
