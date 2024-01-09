@@ -279,6 +279,7 @@ const tab = ref('account')
 
 .box {
     box-shadow: none !important;
+    width: 50%
 
 }
 
