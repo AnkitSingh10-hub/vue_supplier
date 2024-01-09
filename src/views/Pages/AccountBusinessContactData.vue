@@ -6,17 +6,17 @@
             </div>
             <q-tabs v-model="tab" dense class="text-grey" active-color="primary" indicator-color="primary" align="justify"
                 narrow-indicator>
-                <q-tab name="account">
+                <q-tab class="qwidth" name="account">
                     <img :src="accountImage" class="mx-6 pb-2" />
-                    Account Info
+                  <span> Account Info</span> 
                 </q-tab>
-                <q-tab name="business">
+                <q-tab class="qwidth" name="business">
                     <img :src="account2" class="mx-6 pb-2" />
-                    Business Info
+                   <span>Business Info</span> 
                 </q-tab>
-                <q-tab name="contact">
+                <q-tab class="qwidth" name="contact">
                     <img :src="account3" class="mx-12 pb-2" />
-                    Contact-Person Info
+                    <span>Contact-Person Info</span>
                 </q-tab>
             </q-tabs>
 
@@ -87,7 +87,7 @@
 
                                 <label class="text-info">How do you run your business?*</label>
                                 <input type="button" value="As a Registered Company"
-                                    class="input-text-style custom-select  w-full  focus:border-black mt-2" />
+                                    class="input-text-style custom-select w-full focus:border-black mt-2" />
                             </div>
                             <div>
 
@@ -159,7 +159,8 @@
                             <div>
                                 <label class="block text-info-small text-xs">PAN photo*</label>
 
-                                <button class="text-info-small custom-select  w-1/2  focus:border-black mt-2">Upload
+                                <button
+                                    class="text-info-small custom-select  w-1/2 md:w-full focus:border-black mt-2">Upload
                                     PNG</button>
                             </div>
                             <div>
@@ -169,7 +170,7 @@
                             </div>
                             <div>
                                 <label class="block text-info-small text-xs">Business registration photo*</label>
-                                <button class="text-info-small custom-select  w-1/2  focus:border-black mt-2">Upload
+                                <button class="text-info-small custom-select w-1/2 md:w-full focus:border-black mt-2">Upload
                                     PNG</button>
                             </div>
                         </div>
@@ -214,7 +215,7 @@
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-info text-lg font-bold">Citizenship Photo (front)</label>
-                                <button class="text-info-small button3">Upload PNG</button>
+                                <button class="text-info-small custom-select button3">Upload PNG</button>
                                 <div class="attachment">
 
                                     <img :src="attachment" class="mx-1 pb-2" />
@@ -223,7 +224,7 @@
                             </div>
                             <div>
                                 <label class="block text-info text-lg font-bold">Citizenship Photo (back)</label>
-                                <button class="text-info-small button3">Upload PNG</button>
+                                <button class="text-info-small custom-select button3">Upload PNG</button>
                                 <div class="attachment">
 
                                     <img :src="attachment" class="mx-1 pb-2" />
@@ -261,6 +262,15 @@ const tab = ref('account')
 </script>
   
 <style scoped>
+span {
+    color: #656565;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
 .header {
     color: #000;
     font-family: Poppins;
@@ -393,13 +403,8 @@ const tab = ref('account')
 }
 
 .button3 {
-    width: 140px;
-    border: 1px solid #B1B1B1;
-    padding: 15px 0;
     margin-top: 30px;
     margin-bottom: 10px;
-    border-radius: 5px;
-
 }
 
 .attachment {
@@ -414,6 +419,8 @@ const tab = ref('account')
 }
 
 @media (max-width: 768px) {
+
+
     .box {
         width: 90%;
         margin: 0 auto;
@@ -428,20 +435,22 @@ const tab = ref('account')
     }
 
     .button3 {
-        width: 100%;
-        margin-top: 15px;
+        margin-top: 30px;
+        margin-bottom: 10px;
     }
+
 
     .attachment {
         flex-direction: column;
         align-items: center;
     }
+
     .form-two {
-        width: 90%; 
-        margin: 0 auto; 
+        width: 90%;
+        margin: 0 auto;
     }
 
-    
+
 }
 </style>
   
