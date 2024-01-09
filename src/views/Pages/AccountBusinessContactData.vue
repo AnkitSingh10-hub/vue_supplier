@@ -25,8 +25,8 @@
             <q-tab-panels v-model="tab" animated>
                 <q-tab-panel name="account">
 
-                    <form action="" class="max-w-md mx-auto space-y-4">
-                        <div class="grid grid-cols-2 gap-4">
+                    <form action="" class="form-one">
+                        <div class="grid grid-cols-2 gap-3">
                             <div>
                                 <label class="text-info text-lg font-bold">First Name</label>
                                 <input type="text" placeholder="Enter first name"
@@ -66,27 +66,43 @@
                                     class="privacy-policy">Privacy policy</span> & <span class="privacy-policy">Supplier’s
                                     contract.</span></label><br>
                         </div>
-                    </form>
-                    <div class="btn">
+                        <div class="btn">
                         <button class="text-info-button rounded bg-red-600 w-64 h-12 mr-24 text-white font-bold"
                             @click="redirect">
                             Create an account
                         </button>
                     </div>
+                    </form>
+                    
                 </q-tab-panel>
                 <!-- business--------------------------- -->
                 <!-- info -->
                 <q-tab-panel name="business">
-                    <form action="" class=" max-w-md mx-auto space-y-4">
-                        <div class="sec grid-cols-2 gap-4 items-center mt-4">
+                    <form action="" class="form-two">
+                        <!-- <div class="grid grid-cols-2 gap-3">
                             <div>
                                 <label class="text-info text-xs font-bold">How do you run your business?*</label>
                                 <input type="text" placeholder="As a registered company"
                                     class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
                             </div>
                             <div>
+                                <label class="text-info text-xs font-bold">How do you run your business?*</label>
                                 <input type="text" placeholder="Enter Last name"
                                     class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-7 " />
+                            </div>
+                        </div> -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                
+                                <label class="text-info">How do you run your business?*</label>
+                                <button
+                                    class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" >Click me</button>
+                            </div>
+                            <div>
+                                
+                                <label class="text-info">How do you run your business?*</label>
+                                <input type="text" placeholder="As a registered company"
+                                    class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
                             </div>
                         </div>
                         <div>
@@ -170,7 +186,7 @@
                 <!-- contact-person info -->
 
                 <q-tab-panel name="contact">
-                    <form action="" class="max-w-md mx-auto space-y-4">
+                    <form action="">
                         <label class="text-info text-lg font-bold">Full name</label>
                         <input type="text" placeholder="Enter Full Name"
                             class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
@@ -291,12 +307,16 @@ const tab = ref('account')
     font-weight: 400;
     line-height: normal;
 }
-
-.sec {
-    display: flex;
-    align-items: center;
+.form-one{
+    display:flex;
+    flex-direction: column;
+    gap:25px;
 }
-
+.form-two{
+    display:flex;
+    flex-direction: column;
+    gap:25px;
+}
 .privacy-policy {
     color: #EA2127;
     font-family: Poppins;
@@ -317,12 +337,6 @@ const tab = ref('account')
     text-align: center;
 }
 
-.btn {
-    display: flex;
-    justify-content: center;
-    margin: 22px 0;
-    margin-right: 15%;
-}
 
 .line-border {
     display: flex;

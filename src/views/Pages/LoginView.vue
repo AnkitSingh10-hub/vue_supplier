@@ -20,11 +20,8 @@
 
         <input class="check" type="password" id="password" v-model="payload.password" required
           placeholder="Enter Password">
-<<<<<<< HEAD
 
         <SupplierValidation v-model="payload.name" label="name" type="date" placeholder="name" validator="required|min:8" />
-=======
->>>>>>> 378711ed2d60ed0c0550dd115eddd8c702fa8a36
         <a class="pass" href="#">Forgot Password?</a>
 
         <br>
@@ -42,10 +39,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useJwtStore } from '@/stores/jwt';
-<<<<<<< HEAD
 import SupplierValidation from '@/components/FormComponents/SupplierValidation.vue';
-=======
->>>>>>> 378711ed2d60ed0c0550dd115eddd8c702fa8a36
 const jwtStore = useJwtStore()
 
 
