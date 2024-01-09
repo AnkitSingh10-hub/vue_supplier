@@ -26,39 +26,40 @@
                 <q-tab-panel name="account">
 
                     <form action="" class="form-one">
-                        <div class="grid grid-cols-2 gap-3">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                             <div>
                                 <label class="text-info text-lg font-bold">First Name</label>
                                 <input type="text" placeholder="Enter first name"
-                                    class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2"
-                                    required />
+                                    class="input-text-style custom-select w-full focus:border-black mt-2" />
                             </div>
                             <div>
                                 <label class="text-info text-lg font-bold">Last Name</label>
                                 <input type="text" placeholder="Enter Last name"
-                                    class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+                                    class="input-text-style custom-select w-full focus:border-black mt-2" />
                             </div>
                         </div>
                         <div>
                             <label class="text-info text-lg font-bold">Email Address</label>
                             <input type="text" placeholder="Email Address"
-                                class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+                                class="input-text-style custom-select w-full focus:border-black mt-2" />
                         </div>
 
                         <div>
                             <label class="text-info text-lg font-bold">Mobile Number</label>
                             <input type="text" placeholder="Mobile Number"
-                                class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+                                class="input-text-style custom-select w-full focus:border-black mt-2" />
+
                         </div>
                         <div>
                             <label class="text-info text-lg font-bold">Set Password</label>
                             <input type="password" placeholder="Enter Password"
-                                class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+                                class="input-text-style custom-select w-full focus:border-black mt-2" />
+
                         </div>
                         <div>
                             <label class="text-info text-lg font-bold">Confirm Password</label>
                             <input type="password" placeholder="Enter Confirm Password"
-                                class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+                                class="input-text-style custom-select  w-full focus:border-black mt-2" />
                         </div>
                         <div>
                             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
@@ -67,44 +68,50 @@
                                     contract.</span></label><br>
                         </div>
                         <div class="btn">
-                        <button class="text-info-button rounded bg-red-600 w-64 h-12 mr-24 text-white font-bold"
-                            @click="redirect">
-                            Create an account
-                        </button>
-                    </div>
+                            <button
+                                class="text-info-button rounded bg-red-600 w-full md:w-64 h-12 md:mr-24 text-white font-bold"
+                                @click="redirect">
+                                Create an account
+                            </button>
+                        </div>
                     </form>
-                    
+
                 </q-tab-panel>
                 <!-- business--------------------------- -->
                 <!-- info -->
                 <q-tab-panel name="business">
                     <form action="" class="form-two">
-                       
-                        <div class="grid grid-cols-2 gap-3">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                             <div>
-                                
+
                                 <label class="text-info">How do you run your business?*</label>
-                                <input type="button" value="As a Registered Company" class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+                                <input type="button" value="As a Registered Company"
+                                    class="input-text-style custom-select  w-full  focus:border-black mt-2" />
                             </div>
                             <div>
-                                
-                                <label class="text-info">How do you run your business?*</label>
-                                <input type="button" value="As an Individual Supplier" class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
 
-                               </div>
+                                <label class="text-info">How do you run your business?*</label>
+                                <input type="button" value="As an Individual Supplier"
+                                    class="input-text-style custom-select  w-full focus:border-black mt-2" />
+
+                            </div>
                         </div>
                         <div>
                             <label class="text-info text-lg font-bold">What is the name of your company?</label>
                             <input type="text" placeholder="Enter name of company"
-                                class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+                                class="input-text-style custom-select w-full focus:border-black mt-2" />
                         </div>
-                        <h3 class="text-info ">What is the Address of your company</h3>
-                        <div class="grid grid-cols-2 gap-4 items-center">
+                        <div>
+                            <h3 class="text-info ">What is the Address of your company</h3>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+
                             <div>
                                 <label class="block text-info-small text-xs">Province</label>
                                 <select class="w-full text-info-small custom-select">
                                     <option class="select">Select Province</option>
-                                    <option>option 1</option>
+                                    <option>Option 1</option>
                                     <option>Option 2</option>
                                 </select>
                             </div>
@@ -113,7 +120,7 @@
                                 <label class="block text-info-small text-xs">District*</label>
                                 <select class="w-full text-info-small custom-select">
                                     <option class="select">Select District</option>
-                                    <option>option 1</option>
+                                    <option>Option 1</option>
                                     <option>Option 2</option>
                                 </select>
                             </div>
@@ -136,32 +143,34 @@
                             <div>
                                 <label class="text-info-small text-xs">City</label>
                                 <input type="text" placeholder="Enter city"
-                                    class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+                                    class="input-text-style custom-select w-full focus:border-black mt-2" />
                             </div>
                         </div>
-                        <h3 class="text-info ">Business Documents</h3>
+                        <h3 class="text-info">Business Documents</h3>
 
-                        <div class="grid grid-cols-2 gap-4 items-center">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                             <div>
-                            
+
                                 <label class="block text-info-small text-xs">PAN</label>
                                 <input type="text" placeholder="Upload PNG"
-                                    class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+                                    class="input-text-style custom-select w-full focus:border-black mt-2" />
                             </div>
 
                             <div>
                                 <label class="block text-info-small text-xs">PAN photo*</label>
-                                
-                                <button class="input-text-style border border-gray-300 p-2 rounded-md w-1/2 focus:outline-none focus:border-blue-500 mt-2" >Upload PNG</button>
+
+                                <button class="text-info-small custom-select  w-1/2  focus:border-black mt-2">Upload
+                                    PNG</button>
                             </div>
                             <div>
                                 <label class="block text-info-small text-xs">Business registration id*</label>
                                 <input type="text" placeholder="Enter PAN"
-                                    class="text-info-small border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+                                    class="text-info-small custom-select w-full focus:border-black mt-2" />
                             </div>
                             <div>
                                 <label class="block text-info-small text-xs">Business registration photo*</label>
-                                <button class="text-info-small border border-gray-300 p-2 rounded-md w-1/2 focus:outline-none focus:border-blue-500 mt-2" >Upload PNG</button>
+                                <button class="text-info-small custom-select  w-1/2  focus:border-black mt-2">Upload
+                                    PNG</button>
                             </div>
                         </div>
                         <div class="btn-proceed">
@@ -175,23 +184,36 @@
                 <!-- contact-person info -->
 
                 <q-tab-panel name="contact">
-                    <form action="">
-                        <label class="text-info text-lg font-bold">Full name</label>
-                        <input type="text" placeholder="Enter Full Name"
-                            class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
-                        <label class="text-info text-lg font-bold ">Address</label>
-                        <input type="text" placeholder="Email Address"
-                            class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
-                        <label class="text-info text-lg font-bold">Mobile number</label>
-                        <input type="text" placeholder="Enter Mobile number"
-                            class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
-                        <label class="text-info text-lg font-bold">Citizenship id</label>
-                        <input type="text" placeholder="Citizenship id"
-                            class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+                    <form action="" class="form-three">
+                        <div>
+                            <label class="text-info text-lg font-bold">Full Name</label>
+                            <input type="text" placeholder="Enter Full Name"
+                                class="input-text-style custom-select w-full focus:border-black mt-2" />
+                        </div>
+
+                        <div>
+                            <label class="text-info text-lg font-bold">Address</label>
+                            <input type="text" placeholder="Enter Address"
+                                class="input-text-style custom-select w-full focus:border-black mt-2" />
+
+                        </div>
+                        <div>
+                            <label class="text-info text-lg font-bold">Mobile Number</label>
+                            <input type="number" placeholder="Enter Mobile Number"
+                                class="input-text-style custom-select w-full focus:border-black mt-2" />
+
+                        </div>
+                        <div>
+                            <label class="text-info text-lg font-bold">Citizenship ID</label>
+                            <input type="number" placeholder="Enter Citizenship ID"
+                                class="input-text-style custom-select  w-full focus:border-black mt-2" />
+                        </div>
+
+
                         <!-- copy -->
                         <div class="grid grid-cols-2 gap-4">
                             <div>
-                                <label class="text-info text-lg font-bold">Citizenship Photo (front)*</label>
+                                <label class="block text-info text-lg font-bold">Citizenship Photo (front)</label>
                                 <button class="text-info-small button3">Upload PNG</button>
                                 <div class="attachment">
 
@@ -200,7 +222,7 @@
                                 </div>
                             </div>
                             <div>
-                                <label class="text-info text-lg font-bold">Citizenship Photo (back)*</label>
+                                <label class="block text-info text-lg font-bold">Citizenship Photo (back)</label>
                                 <button class="text-info-small button3">Upload PNG</button>
                                 <div class="attachment">
 
@@ -262,6 +284,7 @@ const tab = ref('account')
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-bottom: -20px;
 }
 
 .text-info-small {
@@ -285,10 +308,9 @@ const tab = ref('account')
 .box {
     box-shadow: none !important;
     width: 50%
-
 }
 
-.input-text-style{
+.input-text-style {
     color: #000;
     font-family: Poppins;
     font-size: 16px;
@@ -296,16 +318,25 @@ const tab = ref('account')
     font-weight: 400;
     line-height: normal;
 }
-.form-one{
-    display:flex;
+
+.form-one {
+    display: flex;
     flex-direction: column;
-    gap:25px;
+    gap: 25px;
 }
-.form-two{
-    display:flex;
+
+.form-two {
+    display: flex;
     flex-direction: column;
-    gap:25px;
+    gap: 25px;
 }
+
+.form-three {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 .privacy-policy {
     color: #EA2127;
     font-family: Poppins;
@@ -339,8 +370,10 @@ const tab = ref('account')
 
 .custom-select {
     padding: 8px;
-    border: solid gray;
+    padding-left: 20px;
     border-radius: 5px;
+    border: 1px solid #B1B1B1;
+    background: #FFF;
 }
 
 .button {
@@ -361,9 +394,10 @@ const tab = ref('account')
 
 .button3 {
     width: 140px;
-    border: solid grey;
+    border: 1px solid #B1B1B1;
     padding: 15px 0;
-    margin-top: 7px;
+    margin-top: 30px;
+    margin-bottom: 10px;
     border-radius: 5px;
 
 }
@@ -377,6 +411,36 @@ const tab = ref('account')
     font-weight: 400;
     line-height: normal;
     margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .btn {
+        margin-right: 0;
+    }
+
+    .btn-proceed {
+        margin-right: 0;
+    }
+
+    .button3 {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .attachment {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-two {
+        width: 90%; 
+        margin: 0 auto; 
+    }
+    
 }
 </style>
   
