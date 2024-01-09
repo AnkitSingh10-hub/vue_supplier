@@ -100,7 +100,7 @@
                                 <label class="text-info-small text-xs">Province</label>
                                 <select class="text-info-small custom-select">
                                     <option class="select">Select Province</option>
-                                    <option>option 1</option>
+                                    <option>Option 1</option>
                                     <option>Option 2</option>
                                 </select>
                             </div>
