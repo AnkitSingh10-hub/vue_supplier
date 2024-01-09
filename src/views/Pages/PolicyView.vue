@@ -20,11 +20,6 @@
 
         </div>
         <div class="righthalf">
-<<<<<<< HEAD
-            <form novalidate @submit.prevent="onSubmit">
-
-=======
->>>>>>> 378711ed2d60ed0c0550dd115eddd8c702fa8a36
             <h1 class="heading">POLICIES</h1>
 
             <p class="service-question">
@@ -198,19 +193,11 @@
             <div class="button-container">
                 <button type="button" class="back-button"><img style="display:inline;" src="../../assets/icons/Vector.png" alt=""
                         class="src"> &nbsp; Back</button>
-<<<<<<< HEAD
-                <button v-on:click="buttonClick" type="submit" class="next-button">Next &nbsp;<img style="display:inline;" src="../../assets/icons/Vector-1.png"
-=======
                 <button class="next-button">Next &nbsp;<img style="display:inline;" src="../../assets/icons/Vector-1.png"
->>>>>>> 378711ed2d60ed0c0550dd115eddd8c702fa8a36
                         alt="" class="src"></button>
             </div>
 
             &nbsp;
-<<<<<<< HEAD
-            </form>
-=======
->>>>>>> 378711ed2d60ed0c0550dd115eddd8c702fa8a36
         </div>
 
 
@@ -218,16 +205,6 @@
 </template>
 
 <script setup lang="ts">
-<<<<<<< HEAD
-import { Form, Field } from 'vee-validate';
-
-
-const buttonClick = () =>{
-    console.log("I am clicked")
-}
-
-=======
->>>>>>> 378711ed2d60ed0c0550dd115eddd8c702fa8a36
 </script>
 
 <style scoped>
