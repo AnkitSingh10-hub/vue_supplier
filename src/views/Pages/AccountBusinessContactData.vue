@@ -79,42 +79,30 @@
                 <!-- info -->
                 <q-tab-panel name="business">
                     <form action="" class="form-two">
-                        <!-- <div class="grid grid-cols-2 gap-3">
-                            <div>
-                                <label class="text-info text-xs font-bold">How do you run your business?*</label>
-                                <input type="text" placeholder="As a registered company"
-                                    class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
-                            </div>
-                            <div>
-                                <label class="text-info text-xs font-bold">How do you run your business?*</label>
-                                <input type="text" placeholder="Enter Last name"
-                                    class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-7 " />
-                            </div>
-                        </div> -->
+                       
                         <div class="grid grid-cols-2 gap-3">
                             <div>
                                 
                                 <label class="text-info">How do you run your business?*</label>
-                                <button
-                                    class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" >Click me</button>
+                                <input type="button" value="As a Registered Company" class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
                             </div>
                             <div>
                                 
                                 <label class="text-info">How do you run your business?*</label>
-                                <input type="text" placeholder="As a registered company"
-                                    class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
-                            </div>
+                                <input type="button" value="As an Individual Supplier" class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
+
+                               </div>
                         </div>
                         <div>
                             <label class="text-info text-lg font-bold">What is the name of your company?</label>
                             <input type="text" placeholder="Enter name of company"
                                 class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
                         </div>
-                        <div class="grid grid-cols-2 gap-4 items-center mt-4">
+                        <h3 class="text-info ">What is the Address of your company</h3>
+                        <div class="grid grid-cols-2 gap-4 items-center">
                             <div>
-                                <label class="text-info text-xs font-bold">What is the address of your company?*</label>
-                                <label class="text-info-small text-xs">Province</label>
-                                <select class="text-info-small custom-select">
+                                <label class="block text-info-small text-xs">Province</label>
+                                <select class="w-full text-info-small custom-select">
                                     <option class="select">Select Province</option>
                                     <option>option 1</option>
                                     <option>Option 2</option>
@@ -122,24 +110,24 @@
                             </div>
 
                             <div>
-                                <label class="text-info-small text-xs">District*</label>
-                                <select class="text-info-small custom-select" style="width: 200px">
+                                <label class="block text-info-small text-xs">District*</label>
+                                <select class="w-full text-info-small custom-select">
                                     <option class="select">Select District</option>
                                     <option>option 1</option>
                                     <option>Option 2</option>
                                 </select>
                             </div>
                             <div>
-                                <label class="text-info-small text-xs">Municipality*</label>
-                                <select class="text-info-small custom-select" style="width: 200px">
+                                <label class="block text-info-small text-xs">Municipality*</label>
+                                <select class="w-full text-info-small custom-select">
                                     <option class="select">Select muncipality</option>
-                                    <option>option 1</option>
+                                    <option>Option 1</option>
                                     <option>Option 2</option>
                                 </select>
                             </div>
                             <div>
-                                <label class="text-info-small text-xs">Ward number*</label>
-                                <select class="text-info-small custom-select" style="width: 200px">
+                                <label class="block text-info-small text-xs">Ward number*</label>
+                                <select class="w-full text-info-small custom-select">
                                     <option class="select">Enter ward number</option>
                                     <option>option 1</option>
                                     <option>Option 2</option>
@@ -151,28 +139,29 @@
                                     class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
                             </div>
                         </div>
-                        <div class="grid grid-cols-2 gap-4 items-center mt-4">
+                        <h3 class="text-info ">Business Documents</h3>
+
+                        <div class="grid grid-cols-2 gap-4 items-center">
                             <div>
-                                <label class="text-info text-xs font-bold">Business Documents</label>
-                                <br />
-                                <label class="text-info-small text-xs">PAN</label>
+                            
+                                <label class="block text-info-small text-xs">PAN</label>
                                 <input type="text" placeholder="Upload PNG"
                                     class="input-text-style border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
                             </div>
 
                             <div>
-                                <label class="text-info-small text-xs">PAN photo*</label>
-                                <br />
-                                <button class="text-info-small button">Upload PNG</button>
+                                <label class="block text-info-small text-xs">PAN photo*</label>
+                                
+                                <button class="input-text-style border border-gray-300 p-2 rounded-md w-1/2 focus:outline-none focus:border-blue-500 mt-2" >Upload PNG</button>
                             </div>
                             <div>
-                                <label class="text-info-small text-xs">Business registration id*</label>
-                                <input type="text" placeholder="EnterPAN"
+                                <label class="block text-info-small text-xs">Business registration id*</label>
+                                <input type="text" placeholder="Enter PAN"
                                     class="text-info-small border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:border-blue-500 mt-2" />
                             </div>
                             <div>
-                                <label class="text-info-small text-xs">Business registration photo*</label>
-                                <button class="text-info-small button2">Upload PNG</button>
+                                <label class="block text-info-small text-xs">Business registration photo*</label>
+                                <button class="text-info-small border border-gray-300 p-2 rounded-md w-1/2 focus:outline-none focus:border-blue-500 mt-2" >Upload PNG</button>
                             </div>
                         </div>
                         <div class="btn-proceed">
