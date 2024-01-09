@@ -160,7 +160,7 @@
                                 <label class="block text-info-small text-xs">PAN photo*</label>
 
                                 <button
-                                    class="text-info-small custom-select  w-1/2 md:w-full focus:border-black mt-2">Upload
+                                    class="text-info-small custom-select  w-1/2 focus:border-black mt-2">Upload
                                     PNG</button>
                             </div>
                             <div>
@@ -170,7 +170,7 @@
                             </div>
                             <div>
                                 <label class="block text-info-small text-xs">Business registration photo*</label>
-                                <button class="text-info-small custom-select w-1/2 md:w-full focus:border-black mt-2">Upload
+                                <button class="text-info-small custom-select w-1/2 focus:border-black mt-2">Upload
                                     PNG</button>
                             </div>
                         </div>
