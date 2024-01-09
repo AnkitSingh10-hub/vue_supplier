@@ -4,17 +4,17 @@
             <div class="flex justify-center text-black font-sans text-xl font-black leading-4">
                 <h1 class="header">JOIN US AS A SUPPLIER</h1>
             </div>
-            <q-tabs v-model="tab" dense class="text-grey" active-color="primary" indicator-color="primary" align="justify"
+            <q-tabs v-model="tab" dense class="text-grey" @change="updateActiveTab" active-color="primary" indicator-color="primary" align="justify"
                 narrow-indicator>
-                <q-tab class="qwidth" name="account">
+                <q-tab @click="changeColor" name="account">
                     <img :src="accountImage" class="mx-6 pb-2" />
                   <span> Account Info</span> 
                 </q-tab>
-                <q-tab class="qwidth" name="business">
+                <q-tab name="business">
                     <img :src="account2" class="mx-6 pb-2" />
                    <span>Business Info</span> 
                 </q-tab>
-                <q-tab class="qwidth" name="contact">
+                <q-tab name="contact">
                     <img :src="account3" class="mx-12 pb-2" />
                     <span>Contact-Person Info</span>
                 </q-tab>
@@ -256,9 +256,10 @@ import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 const router = useRouter()
 const tab = ref('account')
-// const redirect = () => {
-//   router.push('/supplierBusiness')
-// }
+const changeColor = ()=>{
+    console.log("This button is clicked")
+}
+
 </script>
   
 <style scoped>

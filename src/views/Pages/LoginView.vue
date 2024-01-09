@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="contain">
 
     <div class="left-half">
       <h1 class="heading">Welcome to Supplier Sign In Portal</h1>
@@ -102,9 +102,9 @@ const signIn = async () => {
   line-height: normal;
 }
 
-.container {
+.contain {
   display: flex;
-  height: 100%;
+  height: 80vh;
   width: 100%;
   max-width: 100%;
 }
