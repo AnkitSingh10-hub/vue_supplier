@@ -440,6 +440,7 @@ const tab = ref('account')
         width: 90%; 
         margin: 0 auto; 
     }
+
     
 }
 </style>
