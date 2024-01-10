@@ -263,6 +263,14 @@ const changeColor = ()=>{
 </script>
   
 <style scoped>
+div.q-tab--active span{
+    color:#EA2127;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
 span {
     color: #656565;
     font-family: Poppins;
